@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="552" height="596" viewBox="0 0 552 596">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_5864" data-name="Rectangle 5864" width="552" height="596" transform="translate(-0.407)" fill="none"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1887ab"/>
+      <stop offset="1" stop-color="#1bb7d0"/>
+    </linearGradient>
+  </defs>
+  <g id="Mask_Group_5" data-name="Mask Group 5" transform="translate(0.407)" clip-path="url(#clip-path)">
+    <g id="Group_8034" data-name="Group 8034" transform="translate(202.251 -31)">
+      <g id="Group_8033" data-name="Group 8033" transform="translate(0)">
+        <g id="Ellipse_97" data-name="Ellipse 97" transform="translate(0.342)" fill="#f1fdff" stroke="#e4f4f8" stroke-width="40">
+          <ellipse cx="277" cy="274" rx="277" ry="274" stroke="none"/>
+          <ellipse cx="277" cy="274" rx="257" ry="254" fill="none"/>
+        </g>
+        <g id="Group_8032" data-name="Group 8032" transform="translate(95.803 26)" opacity="0.326">
+          <path id="Rectangle_5857" data-name="Rectangle 5857" d="M50,0H194a0,0,0,0,1,0,0V194a20,20,0,0,1-20,20H20A20,20,0,0,1,0,194V50A50,50,0,0,1,50,0Z" transform="translate(-0.461 142)" fill="url(#linear-gradient)"/>
+          <path id="Rectangle_5861" data-name="Rectangle 5861" d="M40,0H178a0,0,0,0,1,0,0V74a20,20,0,0,1-20,20H20A20,20,0,0,1,0,74V40A40,40,0,0,1,40,0Z" transform="translate(100.539 409)" fill="#cdeff5"/>
+          <path id="Rectangle_5859" data-name="Rectangle 5859" d="M10,0H178a0,0,0,0,1,0,0V94a10,10,0,0,1-10,10H10A10,10,0,0,1,0,94V10A10,10,0,0,1,10,0Z" transform="translate(100.539)" fill="#cdeff5"/>
+        </g>
+        <g id="Ellipse_96" data-name="Ellipse 96" transform="translate(0.342)" fill="none" stroke="#e4f4f8" stroke-width="40">
+          <ellipse cx="277" cy="274" rx="277" ry="274" stroke="none"/>
+          <ellipse cx="277" cy="274" rx="257" ry="254" fill="none"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

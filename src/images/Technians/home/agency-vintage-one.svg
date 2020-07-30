@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="383" height="451" viewBox="0 0 383 451">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1887ab"/>
+      <stop offset="1" stop-color="#1bb7d0"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_8025" data-name="Group 8025" transform="translate(-0.216)" opacity="0.451">
+    <path id="Rectangle_5857" data-name="Rectangle 5857" d="M90,0h96a0,0,0,0,1,0,0V163a20,20,0,0,1-20,20H20A20,20,0,0,1,0,163V90A90,90,0,0,1,90,0Z" transform="translate(0.216 195)" fill="url(#linear-gradient)"/>
+    <path id="Rectangle_5859" data-name="Rectangle 5859" d="M90,0h96a0,0,0,0,1,0,0V163a20,20,0,0,1-20,20H20A20,20,0,0,1,0,163V90A90,90,0,0,1,90,0Z" transform="translate(0.216)" fill="#cdeff5"/>
+    <path id="Rectangle_5860" data-name="Rectangle 5860" d="M90,0h95a0,0,0,0,1,0,0V163a20,20,0,0,1-20,20H20A20,20,0,0,1,0,163V90A90,90,0,0,1,90,0Z" transform="translate(198.216 70)" fill="#cdeff5"/>
+    <path id="Rectangle_5861" data-name="Rectangle 5861" d="M90,0h95a0,0,0,0,1,0,0V163a20,20,0,0,1-20,20H20A20,20,0,0,1,0,163V90A90,90,0,0,1,90,0Z" transform="translate(198.216 268)" fill="#cdeff5"/>
+  </g>
+</svg>

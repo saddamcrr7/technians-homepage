@@ -1,8 +1,13 @@
 @include font-face('SuperiorTitle', 'SuperiorTitle-Black');
-$SuperiorTitleFontFamily: 'SuperiorTitle', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Roboto&family=Roboto+Slab:wght@400;500;600;700&display=swap');
 
-$font-family-base: $SuperiorTitleFontFamily;
-$headings-font-family: $font-family-base;
+$SuperiorTitleFontFamily: 'SuperiorTitle', sans-serif;
+$OpenSansFontFamily: 'Open Sans', sans-serif;
+$RobotoSlabsFontFamily: 'Roboto Slab', sans-serif;
+$RobotoFontFamily: 'Roboto', sans-serif;
+
+$font-family-base: $RobotoSlabsFontFamily;
+$headings-font-family: $OpenSansFontFamily;
 
 $font-weight-light: 300;
 $font-weight-normal: 400;

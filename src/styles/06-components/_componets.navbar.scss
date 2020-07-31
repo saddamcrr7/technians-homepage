@@ -1,0 +1,254 @@
+.c-navbar {
+  $root: &;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  z-index: 99;
+
+  &__nav {
+    width: 134px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    background: $grey;
+    padding-top: 38px;
+    padding-bottom: 58px;
+    transition: background 750ms ease 0s;
+  }
+
+  &__brand {
+    width: 109px;
+    overflow: hidden;
+    position: absolute;
+    top: 38px;
+    left: 0;
+    transition: 750ms ease 0s;
+  }
+
+  &__brand-image {
+    max-width: 209px;
+  }
+
+  &__title {
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    font-size: 25px;
+    font-family: $RobotoFontFamily;
+    opacity: 0.33;
+  }
+
+  &__toggler {
+    cursor: pointer;
+  }
+
+  &__toggler-icon {
+    width: 40px;
+    height: 29px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    span {
+      width: 100%;
+      height: 3px;
+      background: #323232;
+      border-radius: 2px;
+      display: block;
+
+      &:last-child {
+        width: 80%;
+      }
+    }
+  }
+
+  &__menu {
+    width: 0px;
+    overflow: hidden;
+    transition: width 750ms ease 0s;
+  }
+
+  &__menu-container {
+    display: flex;
+    width: calc(100vw - 134px);
+    height: 100vh;
+  }
+
+  &__menu-row {
+    max-width: 50%;
+    flex: 0 0 50%;
+    display: flex;
+    padding-top: 85px;
+    padding-bottom: 82px;
+    padding-right: 85px;
+    align-items: flex-end;
+    background: $white;
+  }
+
+  &__menu-col {
+    max-width: 50%;
+    flex: 0 0 50%;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-left: 20px;
+  }
+
+  &__item {
+    padding-bottom: 25px;
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    transform: translate(-50px, 20px);
+    transition: transform 0.4s cubic-bezier(0, 0, 0.11, 0.99) 0ms, opacity 0.2s;
+
+
+    &:nth-last-of-type(2) {
+      padding-bottom: 0;
+    }
+
+  }
+
+  &__item-bg {
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    z-index: 1;
+    opacity: 0;
+    transition: 0.2s ease 0s;
+  }
+
+  &__item-link {
+    color: $black;
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: $font-weight-bold;
+    opacity: .33;
+    font-family: $OpenSansFontFamily;
+    transition: 0.4s ease 0s;
+    display: block;
+
+    &:hover {
+      color: $black;
+      opacity: 1;
+    }
+  }
+
+  &__images {
+    max-width: 50%;
+    flex: 0 0 50%;
+    position: relative;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 750ms ease 0s;
+  }
+
+  &__contacts {
+    transform: translateY(50px);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0, 0, 0.11, 0.99) 0ms, opacity 0.2s;
+  }
+
+  &__address {
+    text-align: right;
+  }
+
+  &__address-name,
+  &__address-number {
+    font-size: 22px;
+    line-height: 23px;
+    font-family: $OpenSansFontFamily;
+    color: #323232;
+    line-height: 33px;
+  }
+
+  &__address-number {
+    font-weight: $font-weight-semibold;
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 34px;
+  }
+
+  &__social {
+    margin-left: 30px;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &.is-active {
+    #{$root} {
+      &__nav {
+        background: $white;
+      }
+
+      &__brand {
+        width: 209px;
+        top: 46px;
+        left: 60px;
+      }
+
+      &__contacts {
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: .2s;
+      }
+
+      &__item {
+        transform: translate(0, 0);
+        opacity: 1;
+
+
+        &:nth-child(1) {
+          transition-delay: 150ms;
+        }
+
+        &:nth-child(2) {
+          transition-delay: 300ms;
+        }
+
+        &:nth-child(3) {
+          transition-delay: 450ms;
+        }
+
+        &:nth-child(4) {
+          transition-delay: 600ms;
+        }
+
+        &:nth-child(5) {
+          transition-delay: 750ms;
+        }
+
+        &:nth-child(6) {
+          transition-delay: 800ms;
+        }
+
+        &:nth-child(7) {
+          transition-delay: 950ms;
+        }
+      }
+    }
+  }
+
+}

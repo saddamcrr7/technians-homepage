@@ -2,7 +2,7 @@ name: Deployment
 on:
   push:
     branches:
-      - front-end
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest

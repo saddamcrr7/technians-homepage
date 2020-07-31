@@ -12,12 +12,12 @@ toggler.addEventListener('click', () => {
   if (!HasClass(navbarElm, 'is-active')) {
     navbarElm.classList.add('is-active')
     menu.style.width = menucontainerWidth
-    mainContainer.style.transform = `scaleX(.5)`
+    mainContainer.style.transform = `scale(.5)`
     mainContainer.style.filter = 'blur(6px)'
   } else {
     navbarElm.classList.remove('is-active')
     menu.style.width = 0
-    mainContainer.style.transform = `scaleX(1)`
+    mainContainer.style.transform = `scale(1)`
     mainContainer.style.filter = 'blur(0)'
   }
 })

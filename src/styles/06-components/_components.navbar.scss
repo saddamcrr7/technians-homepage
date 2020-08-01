@@ -20,6 +20,10 @@
     padding-bottom: 58px;
     transition: background 750ms ease 0s;
     overflow: hidden;
+
+    &:hover {
+      background: $black;
+    }
   }
 
   &__brand {
@@ -28,6 +32,17 @@
     position: absolute;
     top: 38px;
     left: 10px;
+    transition: 750ms ease 0s;
+    z-index: 2;
+  }
+
+  &__logo {
+    position: absolute;
+    top: 59px;
+    left: 44px;
+    max-width: 43px;
+    z-index: 1;
+    opacity: 0;
     transition: 750ms ease 0s;
   }
 
@@ -41,6 +56,7 @@
     font-size: 25px;
     font-family: $RobotoFontFamily;
     opacity: 0.33;
+    transition: color 750ms ease 0s;
   }
 
   &__toggler {
@@ -199,6 +215,25 @@
     }
   }
 
+
+  &.is-scrolled {
+    #{$root} {
+      &__logo {
+        opacity: 1;
+      }
+
+      &__brand {
+        opacity: 0;
+      }
+    }
+
+    &:hover {
+      .c-navbar__logo--blue {
+        opacity: 0;
+      }
+    }
+  }
+
   &.is-active {
     #{$root} {
       &__nav {
@@ -209,6 +244,11 @@
         width: 209px;
         top: 46px;
         left: 60px;
+        opacity: 1;
+      }
+
+      &__logo {
+        opacity: 0;
       }
 
       &__contacts {
@@ -266,6 +306,18 @@
             width: 100%;
           }
         }
+      }
+    }
+  }
+
+  &:not(.is-active) {
+    #{$root}__nav:hover {
+      #{$root}__title {
+        color: $white;
+      }
+
+      #{$root}__toggler-icon span {
+        background: $white;
       }
     }
   }

@@ -60,3 +60,11 @@ menuItems.forEach((menuItem , i) => {
     menuItemBg.style.opacity = '0'
   })
 })
+
+window.addEventListener('scroll', (e)=> {
+  if(window.scrollY > 50) {
+    navbarElm.classList.add('is-scrolled')
+  }else {
+    navbarElm.classList.remove('is-scrolled')
+  }
+})

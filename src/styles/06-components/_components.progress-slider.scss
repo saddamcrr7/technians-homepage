@@ -1,0 +1,62 @@
+.c-progress-slider {
+  max-width: 232px;
+  width: 100%;
+
+  &__top {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+  }
+
+  &__container {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+  }
+
+  &__wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item,
+  &__lenght {
+    color: $white;
+    font-size: 21px;
+    font-family: $OpenSansFontFamily;
+  }
+
+  &__line {
+    width: 100%;
+    height: 2px;
+    background: rgba($white, .39);
+    position: relative;
+
+    &.is-active {
+      .c-progress-slider__line-inner {
+        width: 232px;
+        transition: 3s linear;
+      }
+    }
+  }
+
+  &__line-inner {
+    position: absolute;
+    height: 2px;
+    top: 0;
+    left: 0;
+    background: $white;
+    width: 0px;
+    transition: 0s;
+  }
+
+
+}

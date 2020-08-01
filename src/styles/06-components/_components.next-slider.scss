@@ -3,6 +3,7 @@
   height: 177px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 
 
   &__btn {
@@ -15,6 +16,7 @@
     align-items: center;
     justify-content: center;
     background: $blue;
+    transition: width 300ms ease 0s;
   }
 
   &__wrapper {
@@ -37,6 +39,7 @@
     left: 0;
     @include object-fit(cover);
     z-index: 1;
+    transition: transform 300ms ease 0s;
   }
 
   &__title, &__name {
@@ -54,5 +57,16 @@
   &__name {
     font-size: 28px;
     font-weight: $font-weight-medium;
+  }
+
+  &:hover {
+    .c-next-slider__item--active {
+      .c-next-slider__image {
+        transform: scale(1.2);
+      }
+    }
+    .c-next-slider__btn {
+      width: 65px;
+    }
   }
 }

@@ -1,5 +1,5 @@
 .o-hero {
-
+  position: relative;
 
   &__container {
     padding: 100px 48px;
@@ -171,6 +171,51 @@
     right: 86px;
     bottom: 78px;
     z-index: 3;
+  }
+
+  &__scroll {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    position: absolute;
+    right: 10px;
+    bottom: 358px;
+    transform-origin: right bottom;
+
+    &:hover {
+      .o-hero__scroll-line::before {
+        right: 150%;
+      }
+    }
+  }
+
+  &__scroll-line {
+    width: 177px;
+    height: 2px;
+    margin-left: 15px;
+    background: $blue;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      width: 60px;
+      height: 2px;
+      background: $white;
+      position: absolute;
+      top: 0;
+      right: -50%;
+      transition: 0.7s ease 0s;
+    }
+  }
+
+  &__scroll-text {
+    color: $blue;
+    font-size: 20px;
+    font-family: $RobotoFontFamily;
+    text-transform: uppercase;
+    font-weight: $font-weight-medium;
   }
 
 }

@@ -31,7 +31,7 @@
     position: relative;
   }
 
-  &__image {
+  &__image, &__video {
     position: absolute;
     top: 0;
     width: 100%;
@@ -61,7 +61,7 @@
 
   &:hover {
     .c-next-slider__item--active {
-      .c-next-slider__image {
+      .c-next-slider__image, .c-next-slider__video {
         transform: scale(1.2);
       }
     }

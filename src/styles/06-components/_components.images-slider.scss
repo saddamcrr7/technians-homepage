@@ -13,7 +13,7 @@
     transition: all 300ms ease 0s;
   }
 
-  &__image {
+  &__image, &__video {
     width: 100%;
     height: 100%;
     @include object-fit(cover);

@@ -1,0 +1,115 @@
+.o-clients {
+  padding: 100px 0;
+
+  &__container {
+    @include make-container();
+    padding: 0 90px;
+  }
+
+  &__row {
+    @include make-row();
+  }
+
+  &__col {
+    @include make-col-ready();
+
+    &--left {
+      @include make-col(8);
+    }
+
+    &--right {
+      @include make-col(4);
+    }
+  }
+
+  &__items {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    width: 247px;
+    height: 247px;
+    overflow: hidden;
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    &:hover {
+      .o-clients__image {
+        opacity: 1;
+      }
+
+      .o-clients__logo {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease 0s;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    @include object-fit(cover);
+    opacity: 0;
+    transition: opacity 0.3s ease 0s;
+  }
+
+  &__content {
+    text-align: right;
+    margin-top: 100px;
+  }
+
+  &__sub-title {
+    font-size: 28px;
+    font-weight: $font-weight-light;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 78px;
+      height: 2px;
+      left: 120px;
+      background: $blue;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    font-size: 70px;
+    font-family: $RobotoFontFamily;
+    margin-bottom: 30px;
+  }
+
+  &__sub {
+    font-size: 20px;
+    font-weight: $font-weight-light;
+    margin-bottom: 23px;
+  }
+
+  &__cta {
+    padding: 20px 40px;
+    box-shadow: 0 4px 14px rgba($blue, .60);
+    display: inline-block;
+    border-radius: 10px;
+    color: $white;
+    font-family: $RobotoFontFamily;
+    font-size: 20px;
+    background: linear-gradient(180deg, #1695b4 0, #1bb7d0);
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

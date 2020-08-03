@@ -47,6 +47,7 @@
 @import '05-objects/objects.creative-studio';
 @import '05-objects/objects.clients';
 @import '05-objects/objects.featured-work';
+@import '05-objects/objects.testimonial';
 
 
 // 06. Components
@@ -56,6 +57,8 @@
 @import '06-components/components.count-slider';
 @import '06-components/components.projects-slider';
 @import '06-components/components.progress-slider';
+@import '06-components/components.testimonial-author';
+@import '06-components/components.testimonial';
 
 // 99. Utilities
 @import '99-utilities/utilities.clearfix';

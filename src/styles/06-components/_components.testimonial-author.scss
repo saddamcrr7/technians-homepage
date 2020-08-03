@@ -1,0 +1,38 @@
+.c-testimonial-author {
+  display: flex;
+  align-items: center;
+  padding: 29px 35px;
+  border-right: 4px solid transparent;
+  box-shadow: 0 4px 30px rgba($black, .33);
+  margin-bottom: 56px;
+  cursor: pointer;
+  font-family: $OpenSansFontFamily;
+  color: #323232;
+
+  &__image {
+    margin-right: 52px;
+    width: 128px;
+    height: 128px;
+    border-radius: 65px;
+    @include object-fit(cover);
+  }
+
+  &__name {
+    font-size: 30px;
+    margin-bottom: 9px;
+  }
+
+  &__job {
+    font-size: 20px;
+    font-weight: $font-weight-light;
+  }
+
+  &__companey {
+    font-size: 20px;
+    font-weight: $font-weight-light;
+  }
+
+  &.is-active {
+    border-color: $blue;
+  }
+}

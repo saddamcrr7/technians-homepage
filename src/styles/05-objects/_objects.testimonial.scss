@@ -52,6 +52,7 @@
 
     &--right {
       @include make-col(7);
+      padding-left: 70px;
     }
   }
 

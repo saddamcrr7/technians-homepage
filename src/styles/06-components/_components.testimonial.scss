@@ -1,6 +1,11 @@
 .c-testimonial {
   position: relative;
   width: 100%;
+  padding: {
+    top: 60px;
+    right: 20px;
+    left: 40px;
+  };
 
   &__icon {
     position: absolute;
@@ -27,5 +32,23 @@
     font-size: 25px;
     font-weight: $font-weight-light;
     margin-bottom: 72px;
+  }
+
+  &::before,&::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 275px;
+    background: $blue;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+  }
+
+  &::after {
+    top: 150px;
+    right: 0;
   }
 }

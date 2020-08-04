@@ -1,6 +1,7 @@
 import './components/navbar'
 import './components/hero-slider'
 import './components/testimonial-slider'
+import  './components/blogs-news-slider'
 
 const creativeCard1 = document.querySelector('.o-creative-studio__card--1')
 const creativeCard2 = document.querySelector('.o-creative-studio__card--2')

@@ -1,0 +1,36 @@
+.c-popular-card {
+  padding: 110px 84px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 630px;
+  background: linear-gradient(180deg,#ffd972,#ffb507);
+  border-radius: 30px;
+
+  &__title {
+    font-size: 35px;
+    font-weight: $font-weight-bold;
+    color: $white;
+    max-width: 166px;
+    margin-bottom: 9px;
+  }
+
+  &__by {
+    font-size: 23px;
+    font-weight: $font-weight-light;
+    color: $white;
+    opacity: 0.69;
+    margin-bottom: 12px;
+  }
+
+  &__sponsored {
+    font-size: 23px;
+    font-weight: $font-weight-bold;
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      color: $white;
+    }
+  }
+}

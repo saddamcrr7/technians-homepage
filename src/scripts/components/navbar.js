@@ -1,6 +1,7 @@
 import HasClass from '../util/has-class'
 import getStyle from '../util/getStyle'
 
+const body = document.querySelector('body')
 const navbarElm = document.querySelector('.c-navbar')
 const toggler = navbarElm.querySelector('.c-navbar__toggler')
 const menu = navbarElm.querySelector('.c-navbar__menu')
@@ -14,11 +15,13 @@ toggler.addEventListener('click', () => {
     menu.style.width = menucontainerWidth
     mainContainer.style.transform = `scale(.5)`
     mainContainer.style.filter = 'blur(6px)'
+    body.style.overflow = 'hidden'
   } else {
     navbarElm.classList.remove('is-active')
     menu.style.width = 0
     mainContainer.style.transform = `scale(1)`
     mainContainer.style.filter = 'blur(0)'
+    body.style.overflow = 'auto'
   }
 })
 

@@ -1,0 +1,48 @@
+.o-culture {
+  padding: 67px 0;
+
+  &__container {
+    @include make-container();
+  }
+
+  &__sub-title {
+    font-size: 20px;
+    color: $dark;
+    position: relative;
+    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 52px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 108px;
+      height: 2px;
+      background: $blue;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    position: relative;
+    margin-bottom: 90px;
+  }
+
+  &__title-text {
+    font-size: 70px;
+    font-weight: $font-weight-light;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__title-bg {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+}

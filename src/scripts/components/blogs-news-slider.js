@@ -1,9 +1,8 @@
 import Swiper, {
   Navigation,
-  Autoplay
 } from 'swiper';
 // configure Swiper to use modules
-Swiper.use([Navigation, Autoplay]);
+Swiper.use([Navigation]);
 
 const heroImagesSlider = new Swiper('.o-blogs-news__slider', {
   slidesPerView: 3,

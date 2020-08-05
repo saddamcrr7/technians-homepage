@@ -15,13 +15,13 @@ toggler.addEventListener('click', () => {
     menu.style.width = menucontainerWidth
     mainContainer.style.transform = `scale(.5)`
     mainContainer.style.filter = 'blur(6px)'
-    body.style.overflow = 'hidden'
+    body.classList.add('is-nav-open')
   } else {
     navbarElm.classList.remove('is-active')
     menu.style.width = 0
     mainContainer.style.transform = `scale(1)`
     mainContainer.style.filter = 'blur(0)'
-    body.style.overflow = 'auto'
+    body.classList.remove('is-nav-open')
   }
 })
 
@@ -30,28 +30,23 @@ const menuItems = menu.querySelectorAll('.c-navbar__item')
 const menuImages = navbarElm.querySelectorAll('.c-navbar__image')
 const menuItemBg = menu.querySelector('.c-navbar__item-bg')
 
-menuItems.forEach((menuItem , i) => {
+menuItems.forEach((menuItem, i) => {
   menuItem.addEventListener('mouseenter', () => {
     menuItemBg.style.opacity = '1'
     menuImages[i].style.opacity = '1'
     if (i == 0) {
       menuItemBg.style.top = `${20}px`
-    }else if(i == 1) {
+    } else if (i == 1) {
       menuItemBg.style.top = `${108}px`
-    }
-    else if(i == 2) {
+    } else if (i == 2) {
       menuItemBg.style.top = `${190}px`
-    }
-    else if(i == 3) {
+    } else if (i == 3) {
       menuItemBg.style.top = `${280}px`
-    }
-    else if(i == 4) {
+    } else if (i == 4) {
       menuItemBg.style.top = `${360}px`
-    }
-    else if(i == 5) {
+    } else if (i == 5) {
       menuItemBg.style.top = `${445}px`
-    }
-    else if(i == 6) {
+    } else if (i == 6) {
       menuItemBg.style.top = `${530}px`
     }
   })
@@ -64,10 +59,10 @@ menuItems.forEach((menuItem , i) => {
   })
 })
 
-window.addEventListener('scroll', (e)=> {
-  if(window.scrollY > 50) {
+window.addEventListener('scroll', (e) => {
+  if (window.scrollY > 50) {
     navbarElm.classList.add('is-scrolled')
-  }else {
+  } else {
     navbarElm.classList.remove('is-scrolled')
   }
 })

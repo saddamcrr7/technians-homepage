@@ -69,13 +69,19 @@
     font-size: 17px;
     width: 261px;
     margin: 0 auto;
+    font-family: $OpenSansFontFamily;
 
     img {
       margin-left: 15px;
+      transition: 0.3s ease 0s;
     }
 
     &:hover {
       color: $white;
+
+      img {
+        margin-left: 25px;
+      }
     }
   }
 }

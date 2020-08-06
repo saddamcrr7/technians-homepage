@@ -4,6 +4,9 @@
   padding-bottom: 136px;
   padding-top: 136px;
   display: flex;
+  position: relative;
+  background-color: $white;
+  z-index: 2;
 
   &__container {
     width: 100%;

@@ -3,6 +3,8 @@
   padding-right: 90px;
   padding-bottom: 80px;
   position: relative;
+  background-color: $white;
+  z-index: 2;
 
   &__title {
     color: $dark;

@@ -1,5 +1,8 @@
 .o-creative-studio {
   padding: 35px 0;
+  position: relative;
+  background-color: $white;
+  z-index: 2;
 
   &__container {
     @include make-container();

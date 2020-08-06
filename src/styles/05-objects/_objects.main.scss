@@ -4,9 +4,10 @@
 
   &__container {
     width: calc(100vw - 148px);
-    height: 100vh;
     margin-left: auto;
-    transition: 750ms ease 0s;
-    transform-origin: top right;
+    transition: transform 750ms ease 0s;
+    transform-origin: 100% 0%;
+    padding-bottom: 400px;
+
   }
 }

@@ -9,13 +9,22 @@ const menucontainer = navbarElm.querySelector('.c-navbar__menu-container')
 const mainContainer = document.querySelector('.o-main__container')
 
 toggler.addEventListener('click', () => {
+
+  let Y = 1 / 100 * window.scrollY
+
+  if (Y > 100) {
+    Y = 100
+  }
+
   const menucontainerWidth = getStyle(menucontainer).width
   if (!HasClass(navbarElm, 'is-active')) {
     navbarElm.classList.add('is-active')
     menu.style.width = menucontainerWidth
     mainContainer.style.transform = `scale(.5)`
     mainContainer.style.filter = 'blur(6px)'
+    mainContainer.style.transformOrigin = `100% ${Y}%`
     body.classList.add('is-nav-open')
+
   } else {
     navbarElm.classList.remove('is-active')
     menu.style.width = 0

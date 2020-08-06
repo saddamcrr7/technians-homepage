@@ -1,5 +1,7 @@
 .o-hero {
   position: relative;
+  background-color: $white;
+  z-index: 2;
 
   &__container {
     padding: 100px 48px;

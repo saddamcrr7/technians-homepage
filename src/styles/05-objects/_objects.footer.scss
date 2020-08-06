@@ -1,15 +1,12 @@
 .o-footer {
-  background-color: $white;
-  margin-bottom: 0;
-  position: relative;
   z-index: 1;
+  overflow: hidden;
 
   &__container {
     background: $white;
     overflow: hidden;
     padding-left: 60px;
     padding-right: 60px;
-
     width: 100%;
   }
 
@@ -73,6 +70,11 @@
 
   &__social {
     margin-right: 70px;
+    transition: opacity 0.3s ease 0s;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   &__address-row {
@@ -131,16 +133,19 @@
   }
 
   &__white {
-    width: 100%;
+    width: 102%;
+    max-width: 102%;
   }
 
   &__bg {
     position: fixed;
     top: calc(100% - 700px);
     bottom: 0;
-    left: 0;
     right: 0;
     z-index: -1;
+    width: calc(100% - 134px);
+    transform-origin: 100% 100%;
+    transition: 0.7s ease 0s;
   }
 
   &__bg-image {

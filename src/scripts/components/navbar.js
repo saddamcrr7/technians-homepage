@@ -7,6 +7,7 @@ const toggler = navbarElm.querySelector('.c-navbar__toggler')
 const menu = navbarElm.querySelector('.c-navbar__menu')
 const menucontainer = navbarElm.querySelector('.c-navbar__menu-container')
 const mainContainer = document.querySelector('.o-main__container')
+const footerBg = document.querySelector('.o-footer__bg')
 
 toggler.addEventListener('click', () => {
 
@@ -21,7 +22,9 @@ toggler.addEventListener('click', () => {
     navbarElm.classList.add('is-active')
     menu.style.width = menucontainerWidth
     mainContainer.style.transform = `scale(.5)`
+    footerBg.style.transform = `scale(.5)`
     mainContainer.style.filter = 'blur(6px)'
+    footerBg.style.filter = 'blur(6px)'
     mainContainer.style.transformOrigin = `100% ${Y}%`
     body.classList.add('is-nav-open')
 
@@ -30,6 +33,8 @@ toggler.addEventListener('click', () => {
     menu.style.width = 0
     mainContainer.style.transform = `scale(1)`
     mainContainer.style.filter = 'blur(0)'
+    footerBg.style.transform = `scale(1)`
+    footerBg.style.filter = 'blur(0)'
     body.classList.remove('is-nav-open')
   }
 })

@@ -74,7 +74,7 @@ menuItems.forEach((menuItem, i) => {
 })
 
 window.addEventListener('scroll', (e) => {
-  if (window.scrollY > 50) {
+  if (window.scrollY > 10) {
     navbarElm.classList.add('is-scrolled')
   } else {
     navbarElm.classList.remove('is-scrolled')

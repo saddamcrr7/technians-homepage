@@ -1,4 +1,3 @@
-
 @mixin basic-transition($properties: (all), $duration: $transition-duration, $delay: null, $easing: $easing) {
   $value: null;
 
@@ -6,7 +5,7 @@
     $prop-value: append((), $prop, space);
     $prop-value: append($prop-value, $duration, space);
 
-    @if $delay != null {
+    @if $delay !=null {
       $prop-value: append($prop-value, $delay, space);
     }
 
@@ -16,4 +15,14 @@
   }
 
   transition: $value;
+}
+
+@keyframes run {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100%;
+  }
 }

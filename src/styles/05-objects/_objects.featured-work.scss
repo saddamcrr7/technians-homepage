@@ -62,7 +62,8 @@
     left: 0;
     @include object-fit(cover);
     opacity: 0;
-    transition: 0.5s ease 0s;
+    transition: opacity 0.5s ease 0s, transform 0.5s ease 0.2s;
+    transform: scale(1.2);
 
     &:first-child {
       opacity: 1;
@@ -84,9 +85,23 @@
     left: 0;
     max-width: 1459px;
     width: 100%;
-    backdrop-filter: blur(5px);
+
+  }
+
+  &__detail {
     padding: 31px 52px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
     background-color: rgba($white, 0.2);
+    opacity: 0;
+    transition: 0.5s ease 0s;
+
+    &:first-child {
+      opacity: 1;
+      z-index: 2;
+    }
   }
 
   &__details-title {

@@ -50,6 +50,16 @@
     max-width: 209px;
   }
 
+  &__logo {
+    position: absolute;
+    top: 56px;
+    left: 48px;
+    max-width: 37px;
+    z-index: 1;
+    transition: 750ms ease 0s;
+    opacity: 0;
+  }
+
   &__title {
     white-space: nowrap;
     transform: rotate(-90deg);
@@ -232,13 +242,14 @@
   &.is-scrolled {
     #{$root} {
 
+      &__logo {
+        transition-delay: 0.3s;
+        opacity: 1;
+      }
+
       &__brand {
         left: 10px;
-        width: 109px;
-
-        &--white {
-          width: 105px;
-        }
+        width: 0px;
       }
 
       &__title {
@@ -253,6 +264,16 @@
 
       .c-navbar__brand--white {
         opacity: 1;
+      }
+
+      #{$root}__logo {
+        transition-delay: 0s;
+        &--blue {
+          opacity: 0;
+        }
+        &--white {
+          opacity: 1;
+        }
       }
     }
   }
@@ -269,8 +290,13 @@
 
         &--white {
           opacity: 0;
-          transition: 0s;
         }
+      }
+
+      &__logo {
+        transition: 0.1s;
+        opacity: 0;
+        transition: 0s;
       }
 
       &__title {

@@ -28,29 +28,38 @@ creativeCard3.addEventListener('mouseout', (e) => {
 const creativeSction = document.querySelector('.o-creative-studio')
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > (creativeSction.offsetTop - window.innerHeight) + 200) {
+  if (window.scrollY > (creativeSction.offsetTop - window.innerHeight) +
+    200) {
     creativeSction.classList.add('is-scrolled')
-  }else {
+  } else {
     creativeSction.classList.remove('is-scrolled')
   }
 })
 
 
 const featuredCompanys = document.querySelectorAll('.o-featured-work__company')
-const featuredImages= document.querySelectorAll('.o-featured-work__box-image')
+const featuredImages = document.querySelectorAll('.o-featured-work__box-image')
+const featureddetails = document.querySelectorAll('.o-featured-work__detail')
 
 featuredCompanys.forEach((featuredCompany, i) => {
-  featuredCompany.addEventListener('mouseover',()=> {
+  featuredCompany.addEventListener('mouseenter', () => {
     featuredImages.forEach(featuredImage => {
       featuredImage.style.opacity = '0'
+      featuredImage.style.transform = ''
     })
+
+    featureddetails.forEach(featureddetail => {
+      featureddetail.style.opacity = '0'
+    })
+    featureddetails[i].style.opacity = '1'
     featuredImages[i].style.opacity = '1'
+    featuredImages[i].style.transform = 'scale(1)'
   })
 })
 
 
 const scrollDownBtn = document.querySelector('.o-hero__scroll')
 
-scrollDownBtn.addEventListener('click', ()=> {
+scrollDownBtn.addEventListener('click', () => {
   window.scrollTo(0, window.innerHeight)
 })

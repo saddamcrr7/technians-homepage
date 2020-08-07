@@ -1,6 +1,7 @@
 .o-main {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 
   &__container {
     width: calc(100vw - 148px);
@@ -8,6 +9,10 @@
     transition: transform 750ms ease 0s;
     transform-origin: 100% 0%;
     padding-bottom: 400px;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    };
 
   }
 }

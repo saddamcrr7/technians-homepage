@@ -14,8 +14,19 @@
     align-items: center;
     justify-content: center;
     color: $white;
-    height: 79px;
     font-size: 21px;
     font-family: $OpenSansFontFamily;
   }
+
+
+
+  @include media-breakpoint-down(md) {
+    width: 32px;
+    height: 32px;
+
+    &__item {
+      font-size: 10px;
+    }
+  }
+
 }

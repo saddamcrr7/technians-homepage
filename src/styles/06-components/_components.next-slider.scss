@@ -31,7 +31,8 @@
     position: relative;
   }
 
-  &__image, &__video {
+  &__image,
+  &__video {
     position: absolute;
     top: 0;
     width: 100%;
@@ -42,7 +43,8 @@
     transition: transform 300ms ease 0s;
   }
 
-  &__title, &__name {
+  &__title,
+  &__name {
     position: relative;
     z-index: 2;
     font-family: $RobotoFontFamily;
@@ -61,12 +63,33 @@
 
   &:hover {
     .c-next-slider__item--active {
-      .c-next-slider__image, .c-next-slider__video {
+
+      .c-next-slider__image,
+      .c-next-slider__video {
         transform: scale(1.2);
       }
     }
+
     .c-next-slider__btn {
       width: 65px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 74px;
+    height: 50px;
+
+    &__btn {
+      width: 15px !important;
+      padding: 2px;
+
+      &:hover {
+        width: 20px !important;
+      }
+    }
+
+    &__title {
+      font-size: 5px;
     }
   }
 }

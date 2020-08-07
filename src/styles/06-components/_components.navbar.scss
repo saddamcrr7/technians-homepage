@@ -4,9 +4,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
   display: flex;
   z-index: 99;
+
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+  }
 
   &__nav {
     width: 134px;

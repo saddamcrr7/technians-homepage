@@ -14,11 +14,17 @@
     width: 24px;
     height: 24px;
     overflow: hidden;
+
+    @include media-breakpoint-down(sm) {
+      width: 7px;
+      height: 8px;
+    }
   }
 
   &__wrapper {
     width: 100%;
     height: 100%;
+
   }
 
   &__item {
@@ -32,6 +38,10 @@
     color: $white;
     font-size: 21px;
     font-family: $OpenSansFontFamily;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 6px;
+    }
   }
 
   &__line {
@@ -44,6 +54,10 @@
       .c-progress-slider__line-inner {
         width: 232px;
         transition: 3s linear;
+
+        @include media-breakpoint-down(sm) {
+          width: 65px;
+        }
       }
     }
   }
@@ -56,6 +70,15 @@
     background: $white;
     width: 0px;
     transition: 0s;
+  }
+
+
+  @include media-breakpoint-down(sm) {
+    max-width: 65px;
+
+    &__top {
+      margin-bottom: 1px;
+    }
   }
 
 }

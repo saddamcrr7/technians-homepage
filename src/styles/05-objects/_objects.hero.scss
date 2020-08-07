@@ -14,13 +14,15 @@
   &__col {
     @include make-col-ready();
 
-    &--left {
-      @include make-col(4.2);
-      padding-top: 80px;
-    }
+    @include media-breakpoint-up(lg) {
+      &--left {
+        @include make-col(4.2);
+        padding-top: 80px;
+      }
 
-    &--right {
-      @include make-col(7.8);
+      &--right {
+        @include make-col(7.8);
+      }
     }
   }
 
@@ -126,6 +128,10 @@
 
       .c-project-slider {
         margin-left: 28px;
+
+        @include media-breakpoint-down(sm) {
+          margin-left: 10px;
+        }
       }
     }
   }
@@ -218,6 +224,128 @@
     font-family: $RobotoFontFamily;
     text-transform: uppercase;
     font-weight: $font-weight-medium;
+  }
+
+  @include media-breakpoint-down(lg) {
+
+    &__title {
+      min-height: 200px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__title-text {
+      font-size: 49px;
+    }
+
+    &__sliders {
+      height: 770px;
+    }
+
+    &__images-slider {
+      height: 692px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+
+    &__container {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    &__scroll {
+      display: none;
+    }
+
+    &__title-text {
+      font-size: 49px;
+      text-align: center;
+    }
+
+    &__sub-title {
+      text-align: center;
+
+      &::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &__sub {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__cta {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 55px;
+    }
+
+    &__images-slider {
+      width: calc(100% - 23px);
+    }
+
+    &__count-slider {
+      top: 37px;
+      right: 9px;
+    }
+
+    &__next-slider {
+      right: 23px;
+      bottom: 78px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__sliders {
+      height: 235px;
+    }
+
+    &__images-slider {
+      height: 213px;
+    }
+
+    &__title {
+      min-height: 160px;
+    }
+
+    &__sub-title {
+      font-size: 14px;
+    }
+
+    &__title-text {
+      font-size: 39px;
+    }
+
+    &__sub {
+      font-size: 20px;
+      margin-bottom: 50px;
+    }
+
+    &__cta {
+      font-size: 15px;
+      width: 189px;
+      padding: 15px 40px;
+    }
+
+    &__next-slider {
+      right: 15px;
+      bottom: 34px;
+    }
+
+    &__project-slider{
+      bottom: 22px;
+    }
+
+    &__progress-slider  {
+      width: calc(100% - 51px);
+      height: 104px;
+      padding: 7px 10px;
+    }
   }
 
 }

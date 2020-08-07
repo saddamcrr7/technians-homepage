@@ -10,6 +10,11 @@
     transform-origin: 100% 0%;
     padding-bottom: 400px;
 
+    @include media-breakpoint-down(lg) {
+      width: calc(100vw - 134px);
+
+    };
+
     @include media-breakpoint-down(md) {
       width: 100%;
     };

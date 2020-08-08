@@ -57,10 +57,16 @@
     margin: 70px 25px;
     flex: 0 0 auto;
     padding: 12px 15px;
+    padding-right: 39px;
+
+    &:first-child {
+      margin-left: 60px;
+    }
 
     &__image {
       width: 54px;
       height: 54px;
+      margin-right: 19px;
     }
 
     &__name {

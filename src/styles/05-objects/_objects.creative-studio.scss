@@ -208,6 +208,10 @@
   @include media-breakpoint-down(md) {
     padding-top: 0;
 
+    &__card-bg {
+      width: 122px;
+    }
+
     &__title-text {
       font-size: 50px;
     }

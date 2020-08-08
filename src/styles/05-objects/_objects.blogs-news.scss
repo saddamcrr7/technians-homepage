@@ -121,6 +121,9 @@
   }
 
   @include media-breakpoint-down(md) {
+    &__slider {
+      margin-top: 0;
+     }
     &__row {
       margin-bottom: 0;
     }
@@ -147,7 +150,6 @@
 
     &__slider {
      padding-left: 20px;
-     margin-top: 0;
      padding-top: 60px;
     }
 

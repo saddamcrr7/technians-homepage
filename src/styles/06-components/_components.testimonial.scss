@@ -57,7 +57,7 @@
   }
 
   @include media-breakpoint-down(md){
-    padding-top: 0;
+    padding-top: 20;
     padding-left: 20px;
     text-align: center;
 
@@ -68,12 +68,18 @@
 
     &__sub {
       font-size: 14px;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
 
     &__logo {
       max-width: 170px;
       margin: 0 auto;
+    }
+
+    &__icon {
+      width: 41px;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
 

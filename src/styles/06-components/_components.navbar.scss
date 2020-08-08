@@ -11,6 +11,20 @@
     height: 100vh;
   }
 
+  &::after {
+    content: '';
+    position: absolute;
+    top: calc(5px - 250vw);
+    right: calc(34px - 250vw);
+    width: 500vw;
+    height: 500vw;
+    background-color: $white;
+    border-radius: 50%;
+    transform-origin: center;
+    transform: translateX(6px) translateY(19px) scaleX(0) scaleY(0) translateZ(0px);
+    transition: 1s cubic-bezier(0.39, 0.58, 0.28, 1.02) 0s;
+  }
+
   &__nav {
     width: 134px;
     display: flex;
@@ -46,7 +60,7 @@
     top: 38px;
     left: 160px;
     transition: 750ms ease 0s;
-    z-index: 2;
+    z-index: 6;
 
     &--white {
       opacity: 0;
@@ -120,6 +134,7 @@
 
   &__toggler {
     cursor: pointer;
+    position: relative;z-index: 2;
   }
 
   &__toggler-icon {
@@ -156,6 +171,8 @@
     width: 0px;
     overflow: hidden;
     transition: width 750ms ease 0s, height 750ms ease 0s;
+    position: relative;
+    z-index: 2;
 
     @include media-breakpoint-down(md) {
       height: 0px;
@@ -178,7 +195,6 @@
     width: 100%;
     display: flex;
     align-items: flex-end;
-    background: $white;
     padding: 20px;
 
 
@@ -188,6 +204,7 @@
       padding-top: 85px;
       padding-bottom: 82px;
       padding-right: 85px;
+      background: $white;
     }
 
     @include media-breakpoint-down(sm) {
@@ -343,11 +360,6 @@
     }
   }
 
-
-
-
-
-
   @include media-breakpoint-down(md) {
     flex-direction: column;
 
@@ -489,6 +501,12 @@
             opacity: 0;
           }
         }
+      }
+    }
+
+    @include media-breakpoint-down(md) {
+      &::after {
+        transform: none;
       }
     }
   }

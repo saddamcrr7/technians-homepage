@@ -89,10 +89,6 @@
     padding-right: 0;
     padding-top: 50px;
 
-    &__content {
-      margin-left: -100px;
-    }
-
     &__title {
       font-size: 37px;
       margin-bottom: 50px;
@@ -102,7 +98,7 @@
     }
 
     &__tree {
-      padding-top: 250px;
+      display: none;
     }
   }
 }

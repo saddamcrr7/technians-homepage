@@ -4,22 +4,7 @@ import Swiper, {
 // configure Swiper to use modules
 Swiper.use([Navigation]);
 
-let heroImagesSlider
-
-
-const breakpoint = window.matchMedia('(max-width:768px)');
-
-const breakpointChecker = function () {
-  if (breakpoint.matches === true) {
-    if (heroImagesSlider !== undefined) heroImagesSlider.destroy(true, true);
-    return;
-  } else if (breakpoint.matches === false) {
-    return enableSwiper();
-  }
-};
-
-const enableSwiper = function () {
-  heroImagesSlider = new Swiper('.o-blogs-news__slider', {
+let  heroImagesSlider = new Swiper('.o-blogs-news__slider', {
     slidesPerView: 3,
     freeMode: true,
     wrapperClass: 'o-blogs-news__slider-wrapper',
@@ -29,10 +14,18 @@ const enableSwiper = function () {
       nextEl: '.o-blogs-news__slider-arrow--next',
       prevEl: '.o-blogs-news__slider-arrow--prev',
     },
+    breakpoints: {
+      375: {
+        slidesPerView: 1.59,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 2.5,
+      },
+      1024: {
+        slidesPerView: 4,
+      },
+    }
   })
-};
-
-breakpoint.addListener(breakpointChecker);
-
-
-breakpointChecker();

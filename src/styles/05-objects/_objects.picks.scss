@@ -70,6 +70,12 @@
     &__slider-arrow--next {
       right: 28px;
     }
+
+    &__slider-item {
+      &:last-child {
+        margin-right: 28px;
+      }
+    }
   }
 
   @include media-breakpoint-down(md) {

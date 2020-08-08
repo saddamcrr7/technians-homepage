@@ -130,6 +130,11 @@
 
     &__sub-title {
       font-size: 18px;
+
+
+      &::after {
+        left: 0;
+      }
     }
 
     &__title {
@@ -150,14 +155,22 @@
       margin-top: 0;
       max-width: 272px;
       margin-left: auto;
-
-      &::after {
-        left: 0;
-      }
     }
 
     &__title {
       font-size: 36px;
+
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 100px;
+        height: 2px;
+        left: -100px;
+        background: $black;
+        position: absolute;
+        bottom: 25px;
+      }
     }
 
     &__sub {
@@ -171,6 +184,7 @@
     &__cta {
       padding: 11px 17px;
       font-size: 11px;
+      margin-bottom: 20px;
     }
 
     &__item {

@@ -63,13 +63,31 @@
     }
   }
 
+  &__patners {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
   &__patner {
     max-width: 236px;
     margin-bottom: 10px;
 
+    &--mobile {
+      display: none;
+      width: 40%;
+    }
+
     @include media-breakpoint-down(md) {
       display: none;
+
+      &--mobile {
+        display: block;
+      }
     }
+
+
   }
 
   &__contact {
@@ -96,8 +114,11 @@
   &__socials {
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-top: 40px;
+
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+    }
   }
 
   &__social {

@@ -87,6 +87,7 @@
   @include media-breakpoint-down(sm) {
     padding-left: 0;
     padding-right: 0;
+    padding-top: 50px;
 
     &__content {
       margin-left: -100px;
@@ -95,10 +96,13 @@
     &__title {
       font-size: 37px;
       margin-bottom: 50px;
+      max-width: 282px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     &__tree {
-      padding-top: 233px;
+      padding-top: 250px;
     }
   }
 }

@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  width: 419px;
   height: 630px;
   background: linear-gradient(180deg,#ffd972,#ffb507);
   border-radius: 30px;
@@ -31,6 +32,24 @@
 
     &:hover {
       color: $white;
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding: 36px 25px;
+    height: 329px;
+    width: 298px;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__by {
+      font-size: 12px;
+    }
+
+    &__sponsored {
+      font-size: 12px;
     }
   }
 }

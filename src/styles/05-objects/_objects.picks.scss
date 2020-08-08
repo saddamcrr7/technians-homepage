@@ -25,10 +25,10 @@
   }
 
   &__slider-item {
-    flex: 0 0 auto;
+    flex: 0 0 400px;
   }
 
-  &__slider-arrow  {
+  &__slider-arrow {
     position: absolute;
     bottom: 0;
     z-index: 30;
@@ -57,11 +57,30 @@
     align-items: center;
     color: #000;
     z-index: 2;
-    font-family: Open Sans,sans-serif;
+    font-family: Open Sans, sans-serif;
 
     img {
       margin-left: 15px;
     }
+  }
 
+  @include media-breakpoint-down(lg) {
+    padding-right: 0;
+
+    &__slider-arrow--next {
+      right: 28px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-left: 28px;
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__slider-item {
+      flex: 0 0 320px;
+    }
   }
 }

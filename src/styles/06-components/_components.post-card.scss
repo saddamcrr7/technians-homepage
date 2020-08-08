@@ -191,6 +191,77 @@
       &__author-tag {
         border-color: #00bad4;
       }
+
+      @include media-breakpoint-down(lg) {
+        &__header {
+          height: 125px;
+        }
+
+        &__body {
+          top: 125px;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    height: 329px;
+    width: 298px;
+    flex: 0 0 298px;
+
+    &__header {
+      height: 189px;
+    }
+
+    &__body {
+      padding: 24px 22px;
+    }
+
+    &__meta {
+      font-size: 10px;
+      margin-bottom: 59px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 59px;
+    }
+
+    &__author-image {
+      width: 43px;
+      height: 43px;
+
+      img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    &__author-image-border {
+      bottom: 2px;
+
+      svg {
+        height: 20px;
+        width: 43px;
+      }
+    }
+
+    &__author-title {
+      font-size: 9px;
+      margin-bottom: 4px;
+    }
+
+    &__author-name {
+      font-size: 12px;
+      margin-bottom: 15px;
+    }
+
+    &__author-tag {
+      font-size: 7px;
+    }
+
+    &__view-count {
+      font-size: 11px;
     }
   }
 }

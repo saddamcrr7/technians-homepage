@@ -51,12 +51,54 @@
   }
 
   &__row {
-    @include make-row();
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
   }
 
   &__col {
     @include make-col-ready();
-    @include make-col(6);
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-left: 28px;
+    padding-right: 28px;
+
+    &__title {
+      font-size: 70px;
+      line-height: initial;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    &__tree {
+      max-width: 93px;
+    }
+
+    &__title {
+      font-size: 50px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding-left: 0;
+    padding-right: 0;
+
+    &__content {
+      margin-left: -100px;
+    }
+
+    &__title {
+      font-size: 37px;
+      margin-bottom: 50px;
+    }
+
+    &__tree {
+      padding-top: 233px;
+    }
   }
 }

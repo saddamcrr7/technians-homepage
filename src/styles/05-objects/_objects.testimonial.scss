@@ -45,17 +45,20 @@
   &__row {
     @include make-row();
   }
+
   &__col {
     @include make-col-ready();
     position: unset;
 
-    &--left {
-      @include make-col(5);
-    }
+    @include media-breakpoint-up(lg) {
+      &--left {
+        @include make-col(5);
+      }
 
-    &--right {
-      @include make-col(7);
-      padding-left: 70px;
+      &--right {
+        @include make-col(7);
+        padding-left: 70px;
+      }
     }
   }
 
@@ -86,6 +89,99 @@
       &.swiper-pagination-bullet-active {
         background-color: $blue;
       }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    &__container {
+      padding-right: 28px;
+    }
+
+    &__title {
+      font-size: 70px;
+
+      &::before {
+        right: 0;
+      }
+    }
+
+    &__col--right {
+      padding-left: 15px;
+    }
+
+    &__slider {
+      max-width: 650px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+  }
+
+  @include media-breakpoint-down(md) {
+
+    &__title {
+      font-size: 50px;
+
+      &::before {
+        right: 0;
+      }
+    }
+
+    &__container {
+      padding-left: 28px;
+    }
+
+    &__authors {
+      display: flex;
+      overflow: scroll;
+      margin-left: -37px;
+      margin-right: -28px;
+    }
+
+    &__slider {
+      height: 450px;
+    }
+
+    &__col--right {
+      position: relative;
+      padding-top: 52px;
+    }
+
+    &__slider-pagination {
+      top: 0;
+      display: flex;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .swiper-pagination-bullet {
+        margin-right: 28px;
+        width: 11px;
+        height: 11px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+      }
+    }
+
+    &__sub {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__title {
+      font-size: 36px;
+
+      &::before {
+        width: 300px;
+        right: -200px;
+      }
+    }
+
+    &__sub {
+      font-size: 12px;
     }
   }
 }

@@ -8,21 +8,34 @@
     padding-left: 60px;
     padding-right: 60px;
     width: 100%;
+
+    @include media-breakpoint-down(md) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   &__row {
     @include make-row;
+
+    &--2nd {
+      @include media-breakpoint-down(md) {
+        flex-direction: column-reverse;
+      }
+    }
   }
 
   &__col {
     @include make-col-ready($gutter: 60px);
 
-    &--left {
-      @include make-col(4);
-    }
+    @include media-breakpoint-up(lg) {
+      &--left {
+        @include make-col(4);
+      }
 
-    &--right {
-      @include make-col(8);
+      &--right {
+        @include make-col(8);
+      }
     }
   }
 
@@ -31,6 +44,10 @@
     font-weight: $font-weight-light;
     color: $dark;
     margin-bottom: 20px;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
   }
 
   &__contact-wrapper {
@@ -38,16 +55,30 @@
     align-items: flex-start;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__patner {
     max-width: 236px;
     margin-bottom: 10px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
   }
 
   &__contact {
     width: 50%;
     margin-bottom: 10px;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
   }
 
   &__contact-name {
@@ -65,7 +96,8 @@
   &__socials {
     display: flex;
     align-items: center;
-    margin-top: 50px;
+    justify-content: center;
+    margin-top: 40px;
   }
 
   &__social {
@@ -75,6 +107,10 @@
     &:hover {
       opacity: 0.8;
     }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__address-row {
@@ -83,17 +119,30 @@
     padding: 24px 27px;
     background-color: #f8f6f5;
     margin-bottom: 40px;
+
+    @include media-breakpoint-down(sm) {
+      padding: 14px 11px;
+    }
   }
 
   &__address-col {
     @include make-col-ready();
-    @include make-col(4);
+
+    @include media-breakpoint-up(md) {
+      @include make-col(4);
+    }
   }
 
   &__address-text {
     font-size: 20px;
     font-family: $OpenSansFontFamily;
     color: #15100f;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 20px;
+      font-size: 16px;
+      text-align: center;
+    }
   }
 
   &__ql {
@@ -105,6 +154,10 @@
     font-size: 33px;
     font-weight: $font-weight-bold;
     margin-bottom: 23px;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
   }
 
   &__ql-items {
@@ -112,6 +165,12 @@
     padding-left: 0;
     list-style: none;
     flex-wrap: wrap;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__ql-item {
@@ -123,6 +182,10 @@
     font-size: 22px;
     font-weight: $font-weight-bold;
     color: $black;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
   }
 
   &__cta {
@@ -130,6 +193,13 @@
     color: $dark;
     font-size: 18px;
     font-weight: $font-weight-light;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 5px;
+      margin-right: 0;
+      display: block;
+      text-align: center;
+    }
   }
 
   &__white {
@@ -146,10 +216,16 @@
     width: calc(100% - 134px);
     transform-origin: 100% 100%;
     transition: 0.7s ease 0s;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
   }
 
   &__bg-image {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   &__anim-images {

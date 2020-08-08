@@ -1,5 +1,4 @@
 .c-picks-card {
-  width: 400px;
   height: 488px;
   position: relative;
   border-radius: 28px 28px 0 0;
@@ -119,7 +118,7 @@
     bottom: 0;
     left: 0;
 
-    svg path{
+    svg path {
       transition: 0.3s ease 0s;
     }
   }
@@ -155,13 +154,31 @@
         opacity: 1;
       }
 
-      &__author-name, &__author-post-date  {
+      &__author-name,
+      &__author-post-date {
         color: $white;
       }
 
       &__author-image-border svg path {
         stroke: $white;
       }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    height: 390px;
+
+    &__body {
+      width: 274px;
+    }
+
+    &__tag {
+      font-size: 11px;
+    }
+
+    &__title {
+      font-size: 17px;
+      margin-bottom: 40px;
     }
   }
 }

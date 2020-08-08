@@ -8,22 +8,44 @@ const creativeCard1 = document.querySelector('.o-creative-studio__card--1')
 const creativeCard2 = document.querySelector('.o-creative-studio__card--2')
 const creativeCard3 = document.querySelector('.o-creative-studio__card--3')
 
-creativeCard2.addEventListener('mouseover', (e) => {
-  creativeCard1.style.transform = 'translateX(-57%)'
-})
-creativeCard2.addEventListener('mouseout', (e) => {
-  creativeCard1.style.transform = 'translateX(0%)'
-})
+const creativeCard = (x) => {
+  creativeCard2.addEventListener('mouseover', (e) => {
+    if (x.matches) {
+      creativeCard1.style.transform = 'translateX(-90%)'
+    } else {
+      creativeCard1.style.transform = 'translateX(-57%)'
+    }
+  })
 
-creativeCard3.addEventListener('mouseover', (e) => {
-  creativeCard1.style.transform = 'translateX(-57%)'
-  creativeCard2.style.transform = 'translateX(-136%)'
-})
+  creativeCard2.addEventListener('mouseout', (e) => {
+    creativeCard1.style.transform = 'translateX(0%)'
+  })
 
-creativeCard3.addEventListener('mouseout', (e) => {
-  creativeCard1.style.transform = 'translateX(0%)'
-  creativeCard2.style.transform = 'translateX(-70%)'
-})
+  creativeCard3.addEventListener('mouseover', (e) => {
+    if (x.matches) {
+      creativeCard1.style.transform = 'translateX(-90%)'
+      creativeCard2.style.transform = 'translateX(-220%)'
+    } else {
+      creativeCard1.style.transform = 'translateX(-57%)'
+      creativeCard2.style.transform = 'translateX(-136%)'
+    }
+  })
+
+  creativeCard3.addEventListener('mouseout', (e) => {
+    creativeCard1.style.transform = 'translateX(0%)'
+    if (x.matches) {
+      creativeCard2.style.transform = 'translateX(-128%)'
+    } else {
+      creativeCard2.style.transform = 'translateX(-70%)'
+
+    }
+  })
+}
+
+
+let x = window.matchMedia("(max-width: 765px)")
+creativeCard(x)
+x.addListener(creativeCard)
 
 const creativeSction = document.querySelector('.o-creative-studio')
 

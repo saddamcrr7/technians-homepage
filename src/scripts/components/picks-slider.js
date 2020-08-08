@@ -6,7 +6,7 @@ import Swiper, {
 Swiper.use([Navigation, Autoplay]);
 
 const heroImagesSlider = new Swiper('.o-picks__slider', {
-  slidesPerView: 4,
+  slidesPerView: 'auto',
   freeMode: true,
   spaceBetween: 15,
   wrapperClass: 'o-picks__slider-wrapper',

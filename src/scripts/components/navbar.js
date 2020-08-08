@@ -98,6 +98,6 @@ const navbar = (X) => {
 
 }
 
-var x = window.matchMedia("(max-width: 1024px)")
+let x = window.matchMedia("(max-width: 1024px)")
 navbar(x)
 x.addListener(navbar)

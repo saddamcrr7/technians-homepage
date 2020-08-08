@@ -48,4 +48,14 @@
     transform: translateX(-50%);
     z-index: 1;
   }
+
+  @include media-breakpoint-down(sm) {
+    &__title-text {
+      font-size: 37px;
+    }
+
+    &__title-bg {
+      bottom: 0;
+    }
+  }
 }

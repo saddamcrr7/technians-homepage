@@ -85,3 +85,15 @@ const scrollDownBtn = document.querySelector('.o-hero__scroll')
 scrollDownBtn.addEventListener('click', () => {
   window.scrollTo(0, window.innerHeight)
 })
+
+
+const companys = document.querySelector('.o-featured-work__companys')
+let d = 0
+companys.addEventListener('click', (e) => {
+  if (e.clientX - e.offsetX > -1) {
+    d += e.clientX - e.offsetX
+  } else {
+    d -= e.clientX + e.offsetX
+  }
+  companys.scrollTo(d, 0)
+})

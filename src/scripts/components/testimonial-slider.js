@@ -6,7 +6,7 @@ import Swiper, {
   Autoplay
 } from 'swiper';
 // configure Swiper to use modules
-Swiper.use([ Pagination, EffectFade, Autoplay]);
+Swiper.use([Pagination, EffectFade, Autoplay]);
 
 const authors = document.querySelectorAll('.c-testimonial-author')
 
@@ -25,18 +25,19 @@ const testimonialSlider = new Swiper('.o-testimonial__slider', {
 })
 
 const p = document.querySelector('.o-testimonial__authors')
-
+p.scrollTo(280, 0)
 testimonialSlider.on('slideChange', function () {
   authors.forEach(author => {
     author.classList.remove('is-active')
   })
 
   authors[testimonialSlider.activeIndex].classList.add('is-active')
-  let authorWidth = getStyle(authors[testimonialSlider.activeIndex]).width.replace(/[^0-9\.]+/g,"")
-  p.scrollTo(testimonialSlider.activeIndex * Number(authorWidth) + 40 ,0)
+  let authorWidth = getStyle(authors[testimonialSlider.activeIndex]).width
+    .replace(/[^0-9\.]+/g, "")
+  p.scrollTo(testimonialSlider.activeIndex * Number(authorWidth) + 40, 0)
 });
 
-authors.forEach((author,i)  => {
+authors.forEach((author, i) => {
   author.addEventListener('click', () => {
     authors.forEach(author => {
       author.classList.remove('is-active')

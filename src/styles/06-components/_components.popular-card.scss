@@ -52,4 +52,11 @@
       font-size: 12px;
     }
   }
+
+  @include media-breakpoint-down(xs) {
+    margin:  {
+      left: auto;
+      right: auto;
+    };
+  }
 }

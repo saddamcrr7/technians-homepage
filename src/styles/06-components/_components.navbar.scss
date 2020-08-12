@@ -9,6 +9,26 @@
 
   @include media-breakpoint-up(lg) {
     height: 100vh;
+
+    &__bg {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      bottom: 0;
+      width: 100vw;
+      transition: 0.9s cubic-bezier(0.26, 0.54, 0.79, 0.54) 0s;
+
+      &--1 {
+        background: $blue;
+        z-index: 1;
+      }
+
+      &--2 {
+        background: #b06c4a;
+        z-index: 2;
+        transition-delay: 0.2s;
+      }
+    }
   }
 
   &::after {
@@ -22,7 +42,7 @@
     border-radius: 50%;
     transform-origin: center;
     transform: translateX(6px) translateY(19px) scaleX(0) scaleY(0) translateZ(0px);
-    transition: 1s cubic-bezier(0.39, 0.58, 0.28, 1.02) 0s;
+    transition: 1.5s cubic-bezier(0.39, 0.58, 0.28, 1.02) 0s;
   }
 
   &__nav {
@@ -37,12 +57,14 @@
     padding-bottom: 58px;
     transition: background 350ms ease 0s;
     overflow: hidden;
+    z-index: 4;
 
     @include media-breakpoint-down(md) {
       width: 100%;
       height: 55px;
       flex-direction: row;
       padding: 0 20px;
+      z-index: auto;
     }
 
     @include media-breakpoint-up(lg) {
@@ -134,7 +156,8 @@
 
   &__toggler {
     cursor: pointer;
-    position: relative;z-index: 2;
+    position: relative;
+    z-index: 2;
   }
 
   &__toggler-icon {
@@ -172,11 +195,13 @@
     overflow: hidden;
     transition: width 750ms ease 0s, height 750ms ease 0s;
     position: relative;
-    z-index: 2;
+    z-index: 3;
+    transition-delay: 0s;
 
     @include media-breakpoint-down(md) {
       height: 0px;
       width: 100%;
+      transition-delay: 0;
     }
   }
 
@@ -226,7 +251,8 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    margin-left: 20px;
+    padding-left: 20px;
+    overflow: hidden;
 
     @include media-breakpoint-down(md) {
       margin-left: 0;
@@ -238,21 +264,21 @@
   }
 
   &__item {
-    padding-bottom: 25px;
+    margin-bottom: 25px;
     position: relative;
     z-index: 2;
     opacity: 0;
     transform: translate(-50px, 20px);
     transition: transform 0.4s cubic-bezier(0, 0, 0.11, 0.99) 0ms, opacity 0.2s;
+    position: relative;
 
-
-    &:nth-last-of-type(2) {
+    &:last-child {
       padding-bottom: 0;
     }
 
 
     @include media-breakpoint-down(md) {
-      padding-bottom: 0px;
+      margin-bottom: 0px;
     }
 
   }
@@ -260,10 +286,9 @@
   &__item-bg {
     position: absolute;
     top: 20px;
-    left: -20px;
-    z-index: 1;
-    opacity: 0;
-    transition: 0.2s ease 0s;
+    left: -120%;
+    z-index: -1;
+    transition: left .5s ease 0s;
   }
 
   &__item-link {
@@ -311,9 +336,10 @@
     transform: translateY(50px);
     opacity: 0;
     transition: transform 0.7s ease 0ms, opacity 0.5s;
+    transition-delay: 0;
 
     @include media-breakpoint-down(sm) {
-      transition-delay: 0.5s;
+      transition-delay: 0.7s;
     }
   }
 
@@ -416,8 +442,32 @@
 
   &.is-active {
     #{$root} {
+      &__bg {
+        left: 100%;
+
+        &--1 {
+          transition-delay: 0.2s;
+        }
+
+        &--2 {
+          transition-delay: 0s;
+        }
+      }
+
       &__nav {
         background: $white;
+      }
+
+      &__menu {
+        @include media-breakpoint-up(lg) {
+          transition-delay: 0.7s;
+        }
+      }
+
+      &__contacts {
+        @include media-breakpoint-up(lg) {
+          transition-delay: 0.7s;
+        }
       }
 
       &__logo {
@@ -472,6 +522,10 @@
 
         &:nth-child(7) {
           transition-delay: 950ms;
+        }
+
+        &:nth-child(8) {
+          transition-delay: 1100ms;
         }
       }
 

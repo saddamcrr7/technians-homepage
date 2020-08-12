@@ -102,8 +102,18 @@
   }
 
   @include media-breakpoint-down(lg) {
+    &__slider {
+      margin-bottom: 70px;
+    }
+
     &__slider-arrow {
-      display: none;
+      &--prev {
+        left: 30px;
+      }
+
+      &--next {
+        right: 30px;
+      }
     }
 
     &__container {
@@ -123,7 +133,8 @@
   @include media-breakpoint-down(md) {
     &__slider {
       margin-top: 0;
-     }
+    }
+
     &__row {
       margin-bottom: 0;
     }
@@ -149,8 +160,8 @@
   @include media-breakpoint-down(sm) {
 
     &__slider {
-     padding-left: 20px;
-     padding-top: 60px;
+      padding-left: 20px;
+      padding-top: 60px;
     }
 
     &__row {

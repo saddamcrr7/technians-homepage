@@ -55,35 +55,38 @@ const navbar = (X) => {
 
   const menuItems = menu.querySelectorAll('.c-navbar__item')
   const menuImages = navbarElm.querySelectorAll('.c-navbar__image')
-  const menuItemBg = menu.querySelector('.c-navbar__item-bg')
+  const menuItemBgs = menu.querySelectorAll('.c-navbar__item-bg')
 
 
   if (!x.matches) {
     menuItems.forEach((menuItem, i) => {
       menuItem.addEventListener('mouseenter', () => {
-        menuItemBg.style.opacity = '1'
         menuImages[i].style.opacity = '1'
-        if (i == 0) {
-          menuItemBg.style.top = `${20}px`
-        } else if (i == 1) {
-          menuItemBg.style.top = `${108}px`
-        } else if (i == 2) {
-          menuItemBg.style.top = `${190}px`
-        } else if (i == 3) {
-          menuItemBg.style.top = `${280}px`
-        } else if (i == 4) {
-          menuItemBg.style.top = `${360}px`
-        } else if (i == 5) {
-          menuItemBg.style.top = `${445}px`
-        } else if (i == 6) {
-          menuItemBg.style.top = `${530}px`
-        }
+        menuItemBgs[i].style.left = '-20px'
       })
+
       menuItem.addEventListener('mouseleave', () => {
         menuImages.forEach(menuImage => {
           menuImage.style.opacity = '0'
         })
-        menuItemBg.style.opacity = '0'
+
+        menuItemBgs[i].style.left = '120%'
+
+        menuItemBgs[i].addEventListener('transitionend', () => {
+
+        })
+
+        setTimeout(()=> {
+          menuItemBgs[i].style.display = 'none'
+          menuItemBgs[i].style.left = '-120%'
+
+          setTimeout(()=> {
+            menuItemBgs[i].style.display = 'block'
+          }, 50)
+        }, 500)
+
+
+
       })
     })
   }

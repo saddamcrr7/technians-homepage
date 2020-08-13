@@ -93,11 +93,9 @@ companys.scrollTo(d, 0)
 companys.addEventListener('click', (e) => {
 
   if (e.clientX - e.offsetX > -1) {
-    d += e.clientX - e.offsetX
-    d = d - 50
+    d += 330
   } else {
-    d -= e.clientX + e.offsetX
-    d = d + 50
+    d -= 330
   }
   companys.scrollTo(d, 0)
 })

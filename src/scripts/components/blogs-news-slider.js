@@ -5,7 +5,6 @@ import Swiper, {
 Swiper.use([Navigation]);
 
 let  heroImagesSlider = new Swiper('.o-blogs-news__slider', {
-    slidesPerView: 3,
     freeMode: true,
     wrapperClass: 'o-blogs-news__slider-wrapper',
     slideClass: 'o-blogs-news__slider-item',
@@ -26,6 +25,9 @@ let  heroImagesSlider = new Swiper('.o-blogs-news__slider', {
       },
       1024: {
         slidesPerView: 4,
+      },
+      1600: {
+        slidesPerView: 3,
       },
     }
   })

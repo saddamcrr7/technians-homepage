@@ -17,24 +17,51 @@ const testimonialSlider = new Swiper('.o-testimonial__slider', {
   slideClass: 'o-testimonial__item',
   slideActiveClass: 'o-testimonial__item--active',
   allowTouchMove: false,
-  autoplay: true,
-  pagination: {
-    el: '.o-testimonial__slider-pagination',
-    clickable: true,
-  },
+  autoplay: false,
+
+  breakpoints: {
+    1024: {
+      autoplay: true,
+    },
+
+  }
 })
 
-const p = document.querySelector('.o-testimonial__authors')
-p.scrollTo(280, 0)
+const testimoniaAuthorslSlider = new Swiper('.o-testimonial__authors-slider', {
+  direction: 'horizontal',
+  slidesPerView: 'auto',
+  wrapperClass: 'o-testimonial__authors-slider-wrapper',
+  slideClass: 'o-testimonial__authors',
+  slideActiveClass: 'o-testimonial__authors--active',
+  freeMode: true,
+  autoplay: false,
+  pagination: {
+    el: '.o-testimonial__authors-slider-pagination',
+    clickable: true,
+  },
+
+  breakpoints: {
+    1024: {
+      direction: 'vertical',
+      slidesPerView: 1,
+      freeMode: false,
+      autoplay: {
+        delay: 19000
+      },
+      allowTouchMove: false,
+    },
+
+  }
+})
+
+const p = document.querySelector('.o-testimonial__authors-slider')
 testimonialSlider.on('slideChange', function () {
   authors.forEach(author => {
     author.classList.remove('is-active')
   })
 
   authors[testimonialSlider.activeIndex].classList.add('is-active')
-  let authorWidth = getStyle(authors[testimonialSlider.activeIndex]).width
-    .replace(/[^0-9\.]+/g, "")
-  p.scrollTo(testimonialSlider.activeIndex * Number(authorWidth) + 40, 0)
+
 });
 
 authors.forEach((author, i) => {

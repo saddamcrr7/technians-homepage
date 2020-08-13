@@ -19,12 +19,12 @@
       transition: 0.9s cubic-bezier(0.26, 0.54, 0.79, 0.54) 0s;
 
       &--1 {
-        background: $blue;
+        background: #c5f0f6;
         z-index: 1;
       }
 
       &--2 {
-        background: #b06c4a;
+        background: #00bad3;
         z-index: 2;
         transition-delay: 0.2s;
       }

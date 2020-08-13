@@ -17,14 +17,7 @@ const testimonialSlider = new Swiper('.o-testimonial__slider', {
   slideClass: 'o-testimonial__item',
   slideActiveClass: 'o-testimonial__item--active',
   allowTouchMove: false,
-  autoplay: false,
-
-  breakpoints: {
-    1024: {
-      autoplay: true,
-    },
-
-  }
+  autoplay: true,
 })
 
 const testimoniaAuthorslSlider = new Swiper('.o-testimonial__authors-slider', {
@@ -34,20 +27,19 @@ const testimoniaAuthorslSlider = new Swiper('.o-testimonial__authors-slider', {
   slideClass: 'o-testimonial__authors',
   slideActiveClass: 'o-testimonial__authors--active',
   freeMode: true,
-  autoplay: false,
   pagination: {
     el: '.o-testimonial__authors-slider-pagination',
     clickable: true,
   },
-
+  autoplay: {
+    delay: 10000,
+  },
   breakpoints: {
     1024: {
       direction: 'vertical',
       slidesPerView: 1,
       freeMode: false,
-      autoplay: {
-        delay: 19000
-      },
+
       allowTouchMove: false,
     },
 

@@ -9,6 +9,7 @@ const navbar = (X) => {
   const menucontainer = navbarElm.querySelector('.c-navbar__menu-container')
   const mainContainer = document.querySelector('.o-main__container')
   const footerBg = document.querySelector('.o-footer__bg')
+  const closeBtn = document.querySelector('.c-navbar__close')
 
   toggler.addEventListener('click', () => {
 
@@ -37,20 +38,28 @@ const navbar = (X) => {
       }
 
     } else {
-      navbarElm.classList.remove('is-active')
-      body.classList.remove('is-nav-open')
-
-      if (x.matches) {
-        menu.style.height = 0
-      } else {
-        menu.style.width = 0
-        mainContainer.style.transform = `scale(1)`
-        mainContainer.style.filter = 'blur(0)'
-        footerBg.style.transform = `scale(1)`
-        footerBg.style.filter = 'blur(0)'
-      }
+      closeNavbar()
     }
   })
+
+  closeBtn.addEventListener('click', () => {
+    closeNavbar()
+  })
+
+  const closeNavbar = () => {
+    navbarElm.classList.remove('is-active')
+    body.classList.remove('is-nav-open')
+
+    if (x.matches) {
+      menu.style.height = 0
+    } else {
+      menu.style.width = 0
+      mainContainer.style.transform = `scale(1)`
+      mainContainer.style.filter = 'blur(0)'
+      footerBg.style.transform = `scale(1)`
+      footerBg.style.filter = 'blur(0)'
+    }
+  }
 
 
   const menuItems = menu.querySelectorAll('.c-navbar__item')
@@ -76,16 +85,14 @@ const navbar = (X) => {
 
         })
 
-        setTimeout(()=> {
+        setTimeout(() => {
           menuItemBgs[i].style.display = 'none'
           menuItemBgs[i].style.left = '-120%'
 
-          setTimeout(()=> {
+          setTimeout(() => {
             menuItemBgs[i].style.display = 'block'
           }, 50)
         }, 500)
-
-
 
       })
     })

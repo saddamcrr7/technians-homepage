@@ -63,8 +63,11 @@ const featuredCompanys = document.querySelectorAll('.o-featured-work__company')
 const featuredImages = document.querySelectorAll('.o-featured-work__box-image')
 const featureddetails = document.querySelectorAll('.o-featured-work__detail')
 const companys = document.querySelector('.o-featured-work__companys')
-let d = 305
+let d = 285
 companys.scrollTo(d, 0)
+companys.addEventListener('touchmove',(e)=> {
+  e.preventDefault()
+})
 
 
 featuredCompanys.forEach((featuredCompany, i) => {

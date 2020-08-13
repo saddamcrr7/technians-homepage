@@ -62,8 +62,14 @@ window.addEventListener('scroll', () => {
 const featuredCompanys = document.querySelectorAll('.o-featured-work__company')
 const featuredImages = document.querySelectorAll('.o-featured-work__box-image')
 const featureddetails = document.querySelectorAll('.o-featured-work__detail')
+const companys = document.querySelector('.o-featured-work__companys')
+let d = 305
+companys.scrollTo(d, 0)
+
 
 featuredCompanys.forEach((featuredCompany, i) => {
+  let activeIndex = 0
+
   featuredCompany.addEventListener('mouseenter', () => {
     featuredImages.forEach(featuredImage => {
       featuredImage.style.opacity = '0'
@@ -76,6 +82,17 @@ featuredCompanys.forEach((featuredCompany, i) => {
     featureddetails[i].style.opacity = '1'
     featuredImages[i].style.opacity = '1'
     featuredImages[i].style.transform = 'scale(1)'
+    activeIndex = i
+  })
+
+  featuredCompany.addEventListener('click', (e) => {
+
+    if (e.clientX - e.offsetX > -1) {
+      d += 325
+    } else {
+      d -= 325
+    }
+    companys.scrollTo(d, 0)
   })
 })
 
@@ -84,18 +101,4 @@ const scrollDownBtn = document.querySelector('.o-hero__scroll')
 
 scrollDownBtn.addEventListener('click', () => {
   window.scrollTo(0, window.innerHeight)
-})
-
-
-const companys = document.querySelector('.o-featured-work__companys')
-let d = 280
-companys.scrollTo(d, 0)
-companys.addEventListener('click', (e) => {
-
-  if (e.clientX - e.offsetX > -1) {
-    d += 330
-  } else {
-    d -= 330
-  }
-  companys.scrollTo(d, 0)
 })

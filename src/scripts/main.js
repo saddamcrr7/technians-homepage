@@ -3,6 +3,7 @@ import './components/hero-slider'
 import './components/testimonial-slider'
 import './components/blogs-news-slider'
 import './components/picks-slider'
+import './components/featured-slider'
 
 const creativeCard1 = document.querySelector('.o-creative-studio__card--1')
 const creativeCard2 = document.querySelector('.o-creative-studio__card--2')
@@ -62,40 +63,20 @@ window.addEventListener('scroll', () => {
 const featuredCompanys = document.querySelectorAll('.o-featured-work__company')
 const featuredImages = document.querySelectorAll('.o-featured-work__box-image')
 const featureddetails = document.querySelectorAll('.o-featured-work__detail')
-const companys = document.querySelector('.o-featured-work__companys')
-let d = 285
-companys.scrollTo(d, 0)
-companys.addEventListener('touchmove',(e)=> {
-  e.preventDefault()
-})
 
-
-featuredCompanys.forEach((featuredCompany, i) => {
-  let activeIndex = 0
-
+featuredCompanys.forEach((featuredCompany) => {
   featuredCompany.addEventListener('mouseenter', () => {
+    let i = featuredCompany.dataset.index
     featuredImages.forEach(featuredImage => {
       featuredImage.style.opacity = '0'
       featuredImage.style.transform = ''
     })
-
     featureddetails.forEach(featureddetail => {
       featureddetail.style.opacity = '0'
     })
     featureddetails[i].style.opacity = '1'
     featuredImages[i].style.opacity = '1'
     featuredImages[i].style.transform = 'scale(1)'
-    activeIndex = i
-  })
-
-  featuredCompany.addEventListener('click', (e) => {
-
-    if (e.clientX - e.offsetX > -1) {
-      d += 325
-    } else {
-      d -= 325
-    }
-    companys.scrollTo(d, 0)
   })
 })
 

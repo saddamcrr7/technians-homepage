@@ -4,7 +4,7 @@ import Swiper, {
 // configure Swiper to use modules
 Swiper.use([Navigation]);
 
-let  heroImagesSlider = new Swiper('.o-blogs-news__slider', {
+let  blogsSlider = new Swiper('.o-blogs-news__slider', {
     freeMode: true,
     wrapperClass: 'o-blogs-news__slider-wrapper',
     slideClass: 'o-blogs-news__slider-item',

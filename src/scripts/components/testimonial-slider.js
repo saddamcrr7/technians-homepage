@@ -21,42 +21,51 @@ const testimonialSlider = new Swiper('.o-testimonial__slider', {
 })
 
 const testimoniaAuthorslSlider = new Swiper('.o-testimonial__authors-slider', {
-  direction: 'horizontal',
   slidesPerView: 'auto',
+  centeredSlides: true,
+  slideToClickedSlide: true,
+  direction: 'horizontal',
   wrapperClass: 'o-testimonial__authors-slider-wrapper',
   slideClass: 'o-testimonial__authors',
   slideActiveClass: 'o-testimonial__authors--active',
-  freeMode: true,
+
   pagination: {
     el: '.o-testimonial__authors-slider-pagination',
     clickable: true,
   },
-  autoplay: {
-    delay: 10000,
-  },
   breakpoints: {
     1024: {
       direction: 'vertical',
-      slidesPerView: 1,
-      freeMode: false,
-
       allowTouchMove: false,
+      slidesPerView: 1,
+      autoplay: {
+        delay: 10000,
+      },
     },
-
   }
 })
 
-const p = document.querySelector('.o-testimonial__authors-slider')
-testimonialSlider.on('slideChange', function () {
-  authors.forEach(author => {
-    author.classList.remove('is-active')
+
+
+if (window.innerWidth < 1024) {
+  testimoniaAuthorslSlider.removeAllSlides()
+
+  authors.forEach((author, i) => {
+    const div = document.createElement('div')
+    div.classList.add('o-testimonial__authors')
+    div.appendChild(author)
+    testimoniaAuthorslSlider.appendSlide(div)
   })
 
-  authors[testimonialSlider.activeIndex].classList.add('is-active')
+  setTimeout(() => {
+    testimoniaAuthorslSlider.update();
+  }, 500)
+}
 
-});
 
 authors.forEach((author, i) => {
+
+
   author.addEventListener('click', () => {
     authors.forEach(author => {
       author.classList.remove('is-active')

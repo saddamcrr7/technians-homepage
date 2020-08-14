@@ -17,7 +17,6 @@ const testimonialSlider = new Swiper('.o-testimonial__slider', {
   slideClass: 'o-testimonial__item',
   slideActiveClass: 'o-testimonial__item--active',
   allowTouchMove: false,
-  autoplay: true,
 })
 
 const testimoniaAuthorslSlider = new Swiper('.o-testimonial__authors-slider', {
@@ -38,9 +37,6 @@ const testimoniaAuthorslSlider = new Swiper('.o-testimonial__authors-slider', {
       direction: 'vertical',
       allowTouchMove: false,
       slidesPerView: 1,
-      autoplay: {
-        delay: 10000,
-      },
     },
   }
 })
@@ -63,22 +59,17 @@ if (window.innerWidth < 1024) {
 }
 
 
+
 authors.forEach((author, i) => {
-
-
   author.addEventListener('click', () => {
+    testimonialSlider.slideTo(i);
+  })
+
+  testimonialSlider.on('slideChange', function () {
     authors.forEach(author => {
       author.classList.remove('is-active')
     })
-    testimonialSlider.slideTo(i);
     authors[testimonialSlider.activeIndex].classList.add('is-active')
-  })
+  });
 
-  author.addEventListener('mouseenter', () => {
-    testimonialSlider.autoplay.stop()
-  })
-
-  author.addEventListener('mouseleave', () => {
-    testimonialSlider.autoplay.start()
-  })
 })

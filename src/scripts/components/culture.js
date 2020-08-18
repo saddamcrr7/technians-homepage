@@ -1,5 +1,8 @@
-import Swiper,{A11y} from 'swiper'
-Swiper.use([A11y]);
+import Swiper from 'swiper'
+import {
+  gsap
+} from "gsap";
+
 
 
 var mX, mY, distance,
@@ -14,14 +17,11 @@ function calculateDistance(elem, mouseX, mouseY) {
 
 
 $element.each(function (i) {
-  $(document).mousemove( (e)=> {
+  $(document).mousemove((e) => {
     mX = e.pageX;
     mY = e.pageY;
     let d = calculateDistance($(this), mX, mY)
-    if(d < 300){
-      console.log($(this));
-
-    }
+    // gsap.to($(this), {skewX :-(d / 100) * 7, skewY : (d / 100) * 4, duration: 1})
   });
 });
 
@@ -29,26 +29,28 @@ const cultureSlider = new Swiper('.o-culture__images-slider', {
   wrapperClass: 'o-culture__images-slider-wrapper',
   slideClass: 'o-culture__images-slider-item',
   slidesPerView: 'auto',
-  loop: true,
+  speed: 5000,
   freeMode: true,
-  touchRatio: 0.7,
+  loop: true,
+  touchRatio: 1.5
 })
 const images = document.querySelectorAll('.o-culture__image')
 
 cultureSlider.on('touchMove', function (e) {
-  let diff = -(cultureSlider.touches.diff / 6)
+  let diff = -(cultureSlider.touches.diff / 5)
   images.forEach(image => {
-    image.style.transform = `translateX(${diff}px)`
-    image.style.transition = '0.3s cubic-bezier(0.63, 0.09, 0.58, 1.04) 0s'
+    gsap.to(image, {
+      x: diff,
+      duration: 1
+    })
   })
 });
 
-
 cultureSlider.on('touchEnd', function (e) {
   images.forEach(image => {
-    image.style.transform = `translateX(0px)`
-
-    image.style.transition = '2s cubic-bezier(0.63, 0.09, 0.58, 1.04) 0s'
-
+    gsap.to(image, {
+      x: 0,
+      duration: 5
+    })
   })
 });

@@ -56,7 +56,9 @@
 
   &__images-slider-wrapper {
     display: flex;
-    transition: 1s linear 0s !important;
+    will-change: transform;
+    transition: transform 3s linear!important;
+
   }
 
   &__images-slider-item {
@@ -130,20 +132,42 @@
       transform-origin: left top;
     }
 
+
+
+
   }
 
   &__image-wrapper {
     position: absolute;
     transform: rotate(-15deg);
-    top: -30%;
-    left: -30%;
-    right: -30%;
-    bottom: -30%;
-
+    top: -20%;
+    left: -60%;
+    right: -60%;
+    bottom: -20%;
     transition: 15s ease 0s;
 
     &:hover {
       transform: scale(1.5) rotate(-15deg);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      background: #000;
+      opacity: 0.4;
+      transition: 0.2s linear 0s;
+      z-index: 3;
+    }
+
+
+    &:hover {
+      &::before  {
+        opacity: 0;
+      }
     }
   }
 

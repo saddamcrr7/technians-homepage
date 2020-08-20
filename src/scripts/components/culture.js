@@ -9,11 +9,19 @@ var mX, mY, distance,
   $element = $('.o-culture__images-slider-item');
 
 function calculateDistance(elem, mouseX, mouseY) {
-  return Math.floor(Math.sqrt(Math.pow(mouseX - (elem.offset().left + (elem
-    .width() / 2)), 2) + Math.pow(mouseY - (elem.offset().top + (elem
-    .height() / 2)), 2)));
+  return {
+    y: Math.floor(
+      Math.sqrt(
+        Math.pow(mouseY - (elem.offset().top + (elem.height() / 2)), 2)
+      )
+    ) - Math.round(elem.width() / 2),
+    x: Math.floor(
+      Math.sqrt(
+        Math.pow(mouseX - (elem.offset().left + (elem.width() / 2)), 2)
+      )
+    ) - Math.round(elem.width() / 2),
+  }
 }
-
 
 
 $element.each(function (i) {
@@ -21,7 +29,23 @@ $element.each(function (i) {
     mX = e.pageX;
     mY = e.pageY;
     let d = calculateDistance($(this), mX, mY)
-    // gsap.to($(this), {skewX :-(d / 100) * 7, skewY : (d / 100) * 4, duration: 1})
+
+    if (d.x < 0 && d.y < 0) {
+      console.log(-d.y);
+      gsap.from($(this), {
+        rotate: 0,
+        skewX: -(d.y / 100),
+        duration: 5
+      })
+      $(this).mouseleave(() => {
+        gsap.from($(this), {
+          skewX: -7,
+          skewY: 5,
+          duration: 5
+        })
+
+      })
+    }
   });
 });
 

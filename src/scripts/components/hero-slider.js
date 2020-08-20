@@ -83,40 +83,42 @@ heroImagesSlider.on('slideChange', (e) => {
 })
 
 
-window.addEventListener('load', (e) => {
+
+if (projectSliderElm) {
   progressLine.classList.add('is-active')
-})
 
-nextsliderElm.addEventListener('click', (e) => {
-  heroImagesSlider.slideNext()
-})
+  nextsliderElm.addEventListener('click', (e) => {
+    heroImagesSlider.slideNext()
+  })
 
-imageSliderElm.addEventListener('mouseenter', () => {
-  heroImagesSlider.autoplay.stop()
-  progressLine.classList.remove('is-active')
-})
+  imageSliderElm.addEventListener('mouseenter', () => {
+    heroImagesSlider.autoplay.stop()
+    progressLine.classList.remove('is-active')
+  })
 
-imageSliderElm.addEventListener('mouseleave', () => {
-  heroImagesSlider.autoplay.start()
-  progressLine.classList.add('is-active')
-})
+  imageSliderElm.addEventListener('mouseleave', () => {
+    heroImagesSlider.autoplay.start()
+    progressLine.classList.add('is-active')
+  })
 
-nextsliderElm.addEventListener('mouseenter', () => {
-  heroImagesSlider.autoplay.stop()
-  progressLine.classList.remove('is-active')
-})
+  nextsliderElm.addEventListener('mouseenter', () => {
+    heroImagesSlider.autoplay.stop()
+    progressLine.classList.remove('is-active')
+  })
 
-nextsliderElm.addEventListener('mouseleave', () => {
-  heroImagesSlider.autoplay.start()
-  progressLine.classList.add('is-active')
-})
+  nextsliderElm.addEventListener('mouseleave', () => {
+    heroImagesSlider.autoplay.start()
+    progressLine.classList.add('is-active')
+  })
 
-projectSliderElm.addEventListener('mouseenter', () => {
-  heroImagesSlider.autoplay.stop()
-  progressLine.classList.remove('is-active')
-})
+  projectSliderElm.addEventListener('mouseenter', () => {
+    heroImagesSlider.autoplay.stop()
+    progressLine.classList.remove('is-active')
+  })
 
-projectSliderElm.addEventListener('mouseleave', () => {
-  heroImagesSlider.autoplay.start()
-  progressLine.classList.add('is-active')
-})
+  projectSliderElm.addEventListener('mouseleave', () => {
+    heroImagesSlider.autoplay.start()
+    progressLine.classList.add('is-active')
+  })
+
+}

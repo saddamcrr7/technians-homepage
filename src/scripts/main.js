@@ -10,55 +10,62 @@ const creativeCard1 = document.querySelector('.o-creative-studio__card--1')
 const creativeCard2 = document.querySelector('.o-creative-studio__card--2')
 const creativeCard3 = document.querySelector('.o-creative-studio__card--3')
 
-const creativeCard = (x) => {
-  creativeCard2.addEventListener('mouseover', (e) => {
-    if (x.matches) {
-      creativeCard1.style.transform = 'translateX(-90%)'
-    } else {
-      creativeCard1.style.transform = 'translateX(-57%)'
-    }
-  })
+if(creativeCard1) {
+  const creativeCard = (x) => {
+    creativeCard2.addEventListener('mouseover', (e) => {
+      if (x.matches) {
+        creativeCard1.style.transform = 'translateX(-90%)'
+      } else {
+        creativeCard1.style.transform = 'translateX(-57%)'
+      }
+    })
 
-  creativeCard2.addEventListener('mouseout', (e) => {
-    creativeCard1.style.transform = 'translateX(0%)'
-  })
+    creativeCard2.addEventListener('mouseout', (e) => {
+      creativeCard1.style.transform = 'translateX(0%)'
+    })
 
-  creativeCard3.addEventListener('mouseover', (e) => {
-    if (x.matches) {
-      creativeCard1.style.transform = 'translateX(-90%)'
-      creativeCard2.style.transform = 'translateX(-220%)'
-    } else {
-      creativeCard1.style.transform = 'translateX(-57%)'
-      creativeCard2.style.transform = 'translateX(-136%)'
-    }
-  })
+    creativeCard3.addEventListener('mouseover', (e) => {
+      if (x.matches) {
+        creativeCard1.style.transform = 'translateX(-90%)'
+        creativeCard2.style.transform = 'translateX(-220%)'
+      } else {
+        creativeCard1.style.transform = 'translateX(-57%)'
+        creativeCard2.style.transform = 'translateX(-136%)'
+      }
+    })
 
-  creativeCard3.addEventListener('mouseout', (e) => {
-    creativeCard1.style.transform = 'translateX(0%)'
-    if (x.matches) {
-      creativeCard2.style.transform = 'translateX(-128%)'
-    } else {
-      creativeCard2.style.transform = 'translateX(-70%)'
+    creativeCard3.addEventListener('mouseout', (e) => {
+      creativeCard1.style.transform = 'translateX(0%)'
+      if (x.matches) {
+        creativeCard2.style.transform = 'translateX(-128%)'
+      } else {
+        creativeCard2.style.transform = 'translateX(-70%)'
 
-    }
-  })
-}
+      }
+    })
+  }
 
 
 let x = window.matchMedia("(max-width: 765px)")
 creativeCard(x)
 x.addListener(creativeCard)
 
+}
+
+
 const creativeSction = document.querySelector('.o-creative-studio')
 
-window.addEventListener('scroll', () => {
-  if (window.scrollY > (creativeSction.offsetTop - window.innerHeight) +
-    200) {
-    creativeSction.classList.add('is-scrolled')
-  } else {
-    creativeSction.classList.remove('is-scrolled')
-  }
-})
+if(creativeSction) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > (creativeSction.offsetTop - window.innerHeight) +
+      200) {
+      creativeSction.classList.add('is-scrolled')
+    } else {
+      creativeSction.classList.remove('is-scrolled')
+    }
+  })
+}
+
 
 
 const featuredCompanys = document.querySelectorAll('.o-featured-work__company')
@@ -84,6 +91,9 @@ featuredCompanys.forEach((featuredCompany) => {
 
 const scrollDownBtn = document.querySelector('.o-hero__scroll')
 
-scrollDownBtn.addEventListener('click', () => {
-  window.scrollTo(0, window.innerHeight)
-})
+if(scrollDownBtn) {
+  scrollDownBtn.addEventListener('click', () => {
+    window.scrollTo(0, window.innerHeight)
+  })
+}
+

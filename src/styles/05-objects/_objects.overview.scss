@@ -1,0 +1,94 @@
+.o-overview {
+  padding-top: 100px;
+  padding-bottom: 39px;
+  background: $white;
+
+  &__container {
+    @include make-container();
+    max-width: 1504px;
+  }
+
+  &__top {
+    max-width: 865px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 150px;
+  }
+
+  &__sub-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: $dark;
+    margin-bottom: 32px;
+    padding-bottom: 13px;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 108px;
+      height: 2px;
+      background: $blue;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 13px;
+  }
+
+  &__title-text {
+    position: relative;
+    z-index: 2;
+    font-size: 70px;
+    line-height: 79px;
+    color: $dark;
+    font-weight: $font-weight-bold;
+  }
+
+  &__title-bg {
+    position: absolute;
+    width: calc(100% - 70px);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__sub {
+    font-size: 25px;
+    color: $dark;
+    opacity: 0.5;
+  }
+
+  &__abouts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__about {
+    width: 220px;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  &__about-icon {
+    margin-bottom: 23px;
+  }
+
+  &__about-title {
+    font-size: 25px;
+    font-weight: $font-weight-light;
+    color: $dark;
+  }
+
+  &__image-wapper {
+    margin-left: auto;
+    margin-right: auto;
+    ;
+  }
+}

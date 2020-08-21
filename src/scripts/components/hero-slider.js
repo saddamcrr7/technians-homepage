@@ -33,7 +33,7 @@ const heroCountSlider = new Swiper('.c-count-slider', {
   allowTouchMove: false
 })
 
-const heroProgressSlider = new Swiper('.c-progress-slider__container', {
+const heroProgressSlider = new Swiper('.o-hero__progress-slider .c-progress-slider__container', {
   direction: 'vertical',
   slidesPerView: 1,
   wrapperClass: 'c-progress-slider__wrapper',

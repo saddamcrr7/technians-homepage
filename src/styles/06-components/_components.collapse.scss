@@ -1,0 +1,65 @@
+.c-collapse {
+  position: relative;
+  max-width: 1420px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 31px;
+    left: 31px;
+    width: 100%;
+    height: 100%;
+    background: $blue;
+    z-index: 1;
+    border-radius: 8px;
+  }
+
+  &__container {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background: $white;
+    padding: 50px 35px;
+    border-radius: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 30px rgba($black, 0.16);
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+
+  &__title {
+    font-size: 25px;
+    font-weight: $font-weight-bold;
+    color: $dark;
+    margin-right: 26px;
+  }
+
+  &__body {
+    height: 0px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__texts {
+    padding-top: 50px;
+    font-size: 25px;
+    font-weight: $font-weight-light;
+    color: $dark;
+  }
+
+  &__icon {
+    padding: 25px 21px;
+    background: rgba( $blue, 0.16);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

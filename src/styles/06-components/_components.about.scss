@@ -1,0 +1,68 @@
+.c-about {
+  $root: &;
+  width: 100%;
+  min-height: 434px;
+  padding: 23px 94px 23px 47px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: 0.3s ease 0s;
+  margin-bottom: 50px;
+
+  &__icon {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    opacity: 0.23;
+    transition: 0.3s ease 0s;
+
+    svg,
+    path,
+    text {
+      transition: 0.3s ease 0s;
+
+    }
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: $font-weight-medium;
+    color: $dark;
+    font-family: $RobotoFontFamily;
+    margin-bottom: 32px;
+    transition: 0.3s ease 0s;
+
+  }
+
+  &__sub {
+    font-size: 20px;
+    color: $dark;
+    font-family: $RobotoFontFamily;
+    font-weight: $font-weight-light;
+    transition: 0.3s ease 0s;
+  }
+
+  &:hover {
+    background: $dark;
+
+    #{$root} {
+      &__icon {
+        opacity: 1;
+
+        svg,
+        path,
+        text {
+          fill: $white;
+        }
+      }
+
+      &__title,
+      &__sub {
+        color: white;
+      }
+    }
+
+  }
+}

@@ -5,6 +5,7 @@ import './components/blogs-news-slider'
 import './components/picks-slider'
 import './components/featured-slider'
 import './components/culture'
+import './components/work-slider'
 
 const creativeCard1 = document.querySelector('.o-creative-studio__card--1')
 const creativeCard2 = document.querySelector('.o-creative-studio__card--2')

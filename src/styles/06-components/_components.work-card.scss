@@ -1,0 +1,42 @@
+.c-work-card {
+  @include make-col(4);
+  padding-top: 317px;
+  padding-bottom: 60px;
+
+  &__title {
+    font-size: 70px;
+    text-align: center;
+    font-family: $OpenSansFontFamily;
+    font-weight: $font-weight-medium;
+    margin-bottom: 55px;
+  }
+
+  &__features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__feature {
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: $RobotoFontFamily;
+  }
+  border-top: 20px solid #ebebeb;
+  border-bottom: 20px solid #ebebeb;
+
+  &--1 {
+    border-left: 20px solid #ebebeb;
+    border-right: 10px solid #ebebeb;
+  }
+  &--2 {
+    border-left: 10px solid #ebebeb;
+    border-right: 10px solid #ebebeb;
+  }
+
+  &--3 {
+    border-left: 10px solid #ebebeb;
+    border-right: 20px solid #ebebeb;
+  }
+}

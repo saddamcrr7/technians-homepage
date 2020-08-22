@@ -61,7 +61,8 @@
   &__dots {
     width: 651px;
     height: 536.5px;
-    position: relative;
+    position: sticky;
+    top: 60px;
   }
 
   &__dot {

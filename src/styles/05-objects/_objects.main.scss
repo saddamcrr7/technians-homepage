@@ -11,11 +11,11 @@
     margin-left: auto;
     transition: transform 750ms ease 0s;
     transform-origin: 100% 0%;
-    padding-bottom: 400px;
+    margin-bottom: 600px;
+    background: $white;
 
     @include media-breakpoint-down(lg) {
       width: calc(100vw - 134px);
-
     };
 
     @include media-breakpoint-down(md) {

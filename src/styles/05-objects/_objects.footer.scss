@@ -1,6 +1,6 @@
 .o-footer {
   z-index: 1;
-  overflow: hidden;
+  position: relative;
 
   &__container {
     background: $white;
@@ -224,8 +224,11 @@
   }
 
   &__white {
-    width: 102%;
-    max-width: 102%;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    right: 0%;
+    width: 100%;
   }
 
   &__bg {

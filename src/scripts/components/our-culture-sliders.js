@@ -43,15 +43,7 @@ const slide4 = new Swiper('.o-our-culture__slider--4', {
   allowTouchMove: false,
   loop: true,
 })
-const slide5 = new Swiper('.o-our-culture__slider--5', {
-  direction: 'vertical',
-  slidesPerView: 1,
-  wrapperClass: 'o-our-culture__slider-wrapper',
-  slideClass: 'o-our-culture__slider-item',
-  slideActiveClass: 'o-our-culture__slider-item--active',
-  allowTouchMove: false,
-  loop: true,
-})
+
 const slide6 = new Swiper('.o-our-culture__slider--6', {
   direction: 'vertical',
   slidesPerView: 1,
@@ -86,7 +78,7 @@ const slide8 = new Swiper('.o-our-culture__slider--8', {
   },
 
   controller: {
-    control: [slide1, slide2, slide3, slide4, slide5, slide6, slide7, slide8],
+    control: [slide1, slide2, slide3, slide4, slide6, slide7, slide8],
     by: 'container'
   },
 })

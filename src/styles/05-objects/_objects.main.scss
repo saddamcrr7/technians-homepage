@@ -13,6 +13,8 @@
     transform-origin: 100% 0%;
     margin-bottom: 600px;
     background: $white;
+    position: relative;
+    z-index: 9;
 
     @include media-breakpoint-down(lg) {
       width: calc(100vw - 134px);

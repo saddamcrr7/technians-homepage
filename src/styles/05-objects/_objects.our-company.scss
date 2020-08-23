@@ -166,8 +166,39 @@
   }
 
   @include media-breakpoint-down(sm) {
+    padding-bottom: 0;
     &__dots {
       display: none;
+    }
+
+    &__title {
+      max-width: 270px;
+    }
+
+    &__title-text {
+      font-size: 37px;
+      line-height: 42px;
+      font-weight: $font-weight-light;
+    }
+
+    &__title-bg {
+      top: auto;
+      bottom: 5px;
+    }
+
+    &__container {
+      background: #ebebeb;
+      padding-top: 45px;
+      padding-bottom: 5px;
+    }
+
+    &__row {
+      margin-bottom: 60px;
+    }
+
+    &__section-title {
+      font-size: 25px;
+      margin-bottom: 30px;
     }
   }
 }

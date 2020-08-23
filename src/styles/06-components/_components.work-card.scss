@@ -50,5 +50,15 @@
     flex: 0 0 auto;
     max-width: inherit;
     border-width: 10px;
+    padding-top: 80px;
+
+    &__title {
+      font-size: 33px;
+      margin-bottom: 40px;
+    }
+
+    &__feature {
+      font-size: 18px;
+    }
   }
 }

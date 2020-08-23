@@ -80,6 +80,11 @@
   }
 
   @include media-breakpoint-down(sm) {
+    &__container {
+      padding: 11px 12px 90px 12px;
+      border-bottom: 5px solid $blue;
+
+    }
 
     &::after {
       display: none;
@@ -87,9 +92,14 @@
 
     &__icon {
       position: absolute;
-      bottom: 0;
+      bottom: 15px;
       left: 50%;
       transform: translateX(-50%);
+      padding: 18px 13px 14px 13px;
+    }
+
+    &__title {
+      font-size: 15px;
     }
   }
 

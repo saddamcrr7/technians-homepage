@@ -10,6 +10,7 @@
   justify-content: flex-end;
   transition: 0.3s ease 0s;
   margin-bottom: 50px;
+  background: $white;
 
   &__icon {
     position: absolute;
@@ -64,5 +65,30 @@
       }
     }
 
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 307px;
+    padding-left: 22px;
+    padding-right: 35px;
+    margin-bottom: 29px;
+
+    &__icon {
+      top: -80px;
+      right: -10px;
+      svg {
+        max-width: 120px;
+      }
+
+    }
+    &__title {
+      font-size: 15px;
+      font-weight: $font-weight-medium;
+      margin-bottom: 15px;
+    }
+
+    &__sub {
+      font-size: 15px;
+    }
   }
 }

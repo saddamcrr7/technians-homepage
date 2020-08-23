@@ -77,6 +77,18 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
+
+    &--1, &--5 {
+      @include media-breakpoint-down(sm) {
+        flex-direction: column-reverse;
+      }
+    }
+
+    &--5 {
+      @include media-breakpoint-down(sm) {
+       margin-top: -110px;
+      }
+    }
   }
 
   &__col {
@@ -84,13 +96,36 @@
     padding-left: 0;
     padding-right: 0;
 
-    &--tl {
-      @include make-col(7.34);
-    }
+    @include media-breakpoint-up(md) {
+      &--tl {
+        @include make-col(7.34);
+      }
 
-    &--tr {
-      @include make-col(4.66);
-      padding-right: 80px;
+      &--tr {
+        @include make-col(4.66);
+        padding-right: 80px;
+      }
+
+      &--mr-tl {
+        @include make-col(5);
+      }
+
+      &--mr-tr {
+        @include make-col(7);
+      }
+
+      &--bl {
+        @include make-col(8);
+      }
+
+      &--mr-bl {
+        @include make-col(4);
+      }
+
+      &--mr-br {
+        @include make-col(8);
+      }
+
     }
 
     &--ml {
@@ -98,26 +133,6 @@
     }
 
     &--mr {
-      @include make-col(8);
-    }
-
-    &--mr-tl {
-      @include make-col(5);
-    }
-
-    &--mr-tr {
-      @include make-col(7);
-    }
-
-    &--mr-bl {
-      @include make-col(4);
-    }
-
-    &--mr-br {
-      @include make-col(8);
-    }
-
-    &--bl {
       @include make-col(8);
     }
 
@@ -254,6 +269,85 @@
 
     &__title-bg {
       top: 0;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__sub-title {
+      text-align: center;
+      font-size: 14px;
+      padding-bottom: 10px;
+
+      &::after {
+        left: 50%;
+        top: auto;
+        bottom: 0;
+        transform: translate(-50%, 0%);
+      }
+    }
+
+    &__title {
+      max-width: 100%;
+      margin-bottom: 80px;
+
+    }
+
+    &__title-text {
+      font-size: 37px;
+      padding-left: 0;
+      line-height: 42px;
+      text-align: center;
+    }
+
+    &__title-bg {
+      left: 50%;
+      transform: translate(-50%, 0%);
+      top: -70px;
+    }
+
+    &__slider {
+      &--1 {
+        height: 110px;
+      }
+
+      &--2 {
+        height: 202px;
+      }
+
+      &--3 {
+        height: 143px;
+      }
+
+      &--4 {
+        height: 140px;
+        position: absolute;
+        left: -50%;
+        max-width: 181px;
+        top: 0;
+      }
+
+      &--6 {
+        height: 110px;
+      }
+
+      &--7 {
+        height: 158px;
+      }
+
+      &--8{
+        height: 110px;
+      }
+    }
+
+    &__slider-text {
+      font-size: 25px;
+      max-width: 124px;
+      padding: 0;
+      margin-left: auto;
+      margin-right: auto;
+      height: 140px;
+      padding-bottom: 12px;
+      padding-top: 12px;
     }
   }
 }

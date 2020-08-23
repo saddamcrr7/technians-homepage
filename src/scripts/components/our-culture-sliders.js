@@ -13,7 +13,6 @@ const slide1 = new Swiper('.o-our-culture__slider--1', {
   slideClass: 'o-our-culture__slider-item',
   slideActiveClass: 'o-our-culture__slider-item--active',
   allowTouchMove: false,
-  loop: true,
 })
 
 const slide2 = new Swiper('.o-our-culture__slider--2', {
@@ -23,7 +22,6 @@ const slide2 = new Swiper('.o-our-culture__slider--2', {
   slideClass: 'o-our-culture__slider-item',
   slideActiveClass: 'o-our-culture__slider-item--active',
   allowTouchMove: false,
-  loop: true,
 })
 const slide3 = new Swiper('.o-our-culture__slider--3', {
   slidesPerView: 1,
@@ -31,7 +29,6 @@ const slide3 = new Swiper('.o-our-culture__slider--3', {
   slideClass: 'o-our-culture__slider-item',
   slideActiveClass: 'o-our-culture__slider-item--active',
   allowTouchMove: false,
-  loop: true,
 })
 const slide4 = new Swiper('.o-our-culture__slider--4', {
   slidesPerView: 1,
@@ -39,7 +36,6 @@ const slide4 = new Swiper('.o-our-culture__slider--4', {
   slideClass: 'o-our-culture__slider-item',
   slideActiveClass: 'o-our-culture__slider-item--active',
   allowTouchMove: false,
-  loop: true,
 })
 
 const slide6 = new Swiper('.o-our-culture__slider--6', {
@@ -49,7 +45,6 @@ const slide6 = new Swiper('.o-our-culture__slider--6', {
   slideClass: 'o-our-culture__slider-item',
   slideActiveClass: 'o-our-culture__slider-item--active',
   allowTouchMove: false,
-  loop: true,
 })
 const slide7 = new Swiper('.o-our-culture__slider--7', {
   slidesPerView: 1,
@@ -57,7 +52,6 @@ const slide7 = new Swiper('.o-our-culture__slider--7', {
   slideClass: 'o-our-culture__slider-item',
   slideActiveClass: 'o-our-culture__slider-item--active',
   allowTouchMove: false,
-  loop: true,
 })
 
 const slide8 = new Swiper('.o-our-culture__slider--8', {
@@ -67,7 +61,7 @@ const slide8 = new Swiper('.o-our-culture__slider--8', {
   slideClass: 'o-our-culture__slider-item',
   slideActiveClass: 'o-our-culture__slider-item--active',
   allowTouchMove: false,
-  loop: true,
+  speed: 1000,
 
   autoplay: {
     delay: 2000,

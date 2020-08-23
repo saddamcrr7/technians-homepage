@@ -1,6 +1,8 @@
 .c-collapse {
   position: relative;
   max-width: 1420px;
+  margin-left: auto;
+  margin-right: auto;
 
   &::after {
     content: '';
@@ -55,11 +57,40 @@
 
   &__icon {
     padding: 25px 21px;
-    background: rgba( $blue, 0.16);
+    background: rgba($blue, 0.16);
     border-radius: 4px;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+
+  @include media-breakpoint-down(lg) {
+    max-width: 1000px;
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: 700px;
+    margin-bottom: 90px;
+
+    &__title,
+    &__texts {
+      font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    &::after {
+      display: none;
+    }
+
+    &__icon {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
 }

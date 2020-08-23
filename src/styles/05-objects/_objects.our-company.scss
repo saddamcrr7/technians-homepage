@@ -15,7 +15,10 @@
 
   &__col {
     @include make-col-ready();
-    @include make-col(6)
+
+    @include media-breakpoint-up(lg) {
+      @include make-col(6);
+    }
   }
 
   &__title {
@@ -143,5 +146,28 @@
     right: 184px;
     bottom: 195px;
     transform: rotate(30deg);
+  }
+
+  @include media-breakpoint-down(md) {
+    &__title {
+      margin-bottom: 60px;
+    }
+    &__title-text {
+      font-size: 50px;
+    }
+
+    &__dots {
+      margin-bottom: 50px;
+    }
+
+    &__section-title {
+      font-size: 35px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__dots {
+      display: none;
+    }
   }
 }

@@ -89,6 +89,27 @@
   &__image-wapper {
     margin-left: auto;
     margin-right: auto;
-    ;
+  }
+
+  @include media-breakpoint-down(md) {
+
+    &__title-text {
+      font-size: 50px;
+    }
+    &__abouts {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__about {
+      margin-bottom: 40px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    &__top {
+      max-width: 307px;
+    }
   }
 }

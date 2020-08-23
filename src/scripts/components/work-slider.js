@@ -1,9 +1,10 @@
 import Swiper, {
   Controller,
-  Autoplay
+  Autoplay,
+  Pagination
 } from 'swiper';
 // configure Swiper to use modules
-Swiper.use([Controller, , Autoplay]);
+Swiper.use([Controller, Pagination , Autoplay]);
 const progressLine = document.querySelector('.c-progress-slider__line')
 
 const workprogressslide = new Swiper(
@@ -45,3 +46,17 @@ workImageSlider.on('slideChange', (e) => {
     progressLine.classList.add('is-active')
   }, 20)
 })
+
+const cardsSlider =  new Swiper('.o-work__cards', {
+  wrapperClass: 'o-work__cards-wrapper',
+  slideClass: 'c-work-card',
+  slideActiveClass: 'c-work-card--active',
+  slidesPerView: 1
+})
+
+
+if (window.innerWidth > 767) {
+  if (cardsSlider.initialized) {
+    cardsSlider.destroy()
+  }
+}

@@ -39,4 +39,16 @@
     border-left: 10px solid #ebebeb;
     border-right: 20px solid #ebebeb;
   }
+
+  @include media-breakpoint-down(md) {
+    &__title {
+      font-size: 45px;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    flex: 0 0 auto;
+    max-width: inherit;
+    border-width: 10px;
+  }
 }

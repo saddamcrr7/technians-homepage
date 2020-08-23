@@ -133,5 +133,14 @@
 
   }
 
+  @include media-breakpoint-down(md) {
+    &__title-text {
+      font-size: 50px;
+    }
+
+    &__image-wrapper {
+      height: 300px;
+    }
+  }
 
 }

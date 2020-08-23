@@ -44,18 +44,20 @@ const testimoniaAuthorslSlider = new Swiper('.o-testimonial__authors-slider', {
 
 
 if (window.innerWidth < 1024) {
-  testimoniaAuthorslSlider.removeAllSlides()
+  if (testimoniaAuthorslSlider.initialized) {
+    testimoniaAuthorslSlider.removeAllSlides()
 
-  authors.forEach((author, i) => {
-    const div = document.createElement('div')
-    div.classList.add('o-testimonial__authors')
-    div.appendChild(author)
-    testimoniaAuthorslSlider.appendSlide(div)
-  })
+    authors.forEach((author, i) => {
+      const div = document.createElement('div')
+      div.classList.add('o-testimonial__authors')
+      div.appendChild(author)
+      testimoniaAuthorslSlider.appendSlide(div)
+    })
 
-  setTimeout(() => {
-    testimoniaAuthorslSlider.update();
-  }, 500)
+    setTimeout(() => {
+      testimoniaAuthorslSlider.update();
+    }, 500)
+  }
 }
 
 

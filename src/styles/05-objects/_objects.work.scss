@@ -60,10 +60,12 @@
 
   &__sliders {
     position: relative;
-    width: 1400px;
+    max-width: 1400px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     height: 850px;
+    z-index: 2;
   }
 
   &__image-slider {
@@ -114,9 +116,27 @@
   }
 
   &__cards {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: -236px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  &__cards-wrapper {
+    display: flex;
+  }
+
+
+  @include media-breakpoint-down(md) {
+    &__sliders {
+      height: 400px;
+    }
+    &__sliders-title {
+      font-size: 30px;
+    }
+    &__title-text {
+      font-size: 50px;
+    }
   }
 
 }

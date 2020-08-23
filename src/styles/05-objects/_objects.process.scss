@@ -18,14 +18,16 @@
   &__col {
     @include make-col-ready();
 
-    &--left {
-      @include make-col(5);
-      padding-right: 0;
-    }
+    @include media-breakpoint-up(lg) {
+      &--left {
+        @include make-col(5);
+        padding-right: 0;
+      }
 
-    &--right {
-      @include make-col(7);
-      padding-left: 0;
+      &--right {
+        @include make-col(7);
+        padding-left: 0;
+      }
     }
   }
 
@@ -156,6 +158,16 @@
     font-size: 20px;
     font-weight: $font-weight-light;
     font-family: $RobotoFontFamily;
+  }
+
+  @include media-breakpoint-down(md) {
+    &__title-text {
+      font-size: 50px;
+    }
+
+    &__item {
+      margin-bottom: 0;
+    }
   }
 }
 

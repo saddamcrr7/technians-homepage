@@ -62,6 +62,30 @@
     font-size: 25px;
     color: $dark;
     opacity: 0.5;
+    margin-bottom: 19px;
+  }
+
+  &__cta {
+    font-size: 14px;
+    padding: 11px 24px;
+    font-weight: $font-weight-semibold;
+    font-family: $OpenSansFontFamily;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    color: $blue;
+    border: 1px solid $blue;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+  }
+
+  &__cta-icon {
+    width: 25px;
+
+    path {
+      fill: $blue;
+    }
   }
 
   &__abouts {
@@ -96,6 +120,7 @@
     &__title-text {
       font-size: 50px;
     }
+
     &__abouts {
       max-width: 600px;
       margin-left: auto;
@@ -132,6 +157,10 @@
 
     &__sub {
       font-size: 18px;
+    }
+
+    &__cta {
+      display: flex;
     }
 
     &__abouts {

@@ -51,7 +51,11 @@ const cardsSlider =  new Swiper('.o-work__cards', {
   wrapperClass: 'o-work__cards-wrapper',
   slideClass: 'c-work-card',
   slideActiveClass: 'c-work-card--active',
-  slidesPerView: 1
+  slidesPerView: 1,
+  pagination: {
+    el: '.o-work__cards-pagination',
+    clickable: true,
+  },
 })
 
 

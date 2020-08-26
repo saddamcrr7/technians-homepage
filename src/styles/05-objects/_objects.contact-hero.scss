@@ -1,0 +1,77 @@
+.o-contact-hero {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 340px;
+  padding-bottom: 116px;
+  position: relative;
+
+  &__bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__bg-image {
+    width: 100%;
+    height: 100%;
+    @include object-fit(cover);
+  }
+
+  &__bg-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: $white;
+    opacity: 0.95;
+  }
+
+
+  &__container {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 60px;
+    position: relative;
+    z-index: 2;
+    max-width: 1318px;
+  }
+
+  &__title {
+    font-size: 143px;
+    font-weight: $font-weight-bolder;
+    font-family: $RobotoFontFamily;
+    line-height: 125px;
+  }
+
+  &__sub-title {
+    font-size: 113px;
+    font-weight: $font-weight-light;
+    text-align: right;
+    max-width: 720px;
+    margin-bottom: 130px;
+  }
+
+  &__sub {
+    font-size: 49px;
+    font-weight: $font-weight-light;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 38px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: calc(100% + 200px);
+      height: 2px;
+      background: $dark;
+    }
+  }
+
+
+}

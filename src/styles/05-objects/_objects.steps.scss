@@ -1,0 +1,51 @@
+.o-steps {
+  padding-bottom: 200px;
+  background: $white;
+
+
+  &__container {
+    @include make-container();
+  }
+
+  &__pagination {
+    position: fixed;
+    z-index: 2;
+    top: 50%;
+    left: 200px;
+    transform: translateY(-50%);
+  }
+
+  &__pagination-item {
+    color: $blue;
+    font-size: 14px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 0;
+      width: 0;
+      background: $blue;
+      border-radius: 20px;
+      transition: 0.3s ease 0s;
+      z-index: -1;
+    }
+
+    &.is-active {
+      color: $white;
+
+      &::after {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}

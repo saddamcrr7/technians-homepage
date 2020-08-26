@@ -7,6 +7,8 @@ import './components/featured-slider'
 import './components/culture'
 import './components/work-slider'
 import './components/our-culture-sliders'
+import './components/contact-slider'
+import './components/check-box'
 
 const creativeCard1 = document.querySelector('.o-creative-studio__card--1')
 const creativeCard2 = document.querySelector('.o-creative-studio__card--2')

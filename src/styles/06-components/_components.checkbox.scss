@@ -1,0 +1,36 @@
+.c-checkbox {
+    $root: &;
+
+    display: flex;
+    align-items: center;
+
+    &:not(.c-checkbox--radio) {
+        #{$root} {
+            &__input {
+                border: 1px solid $blue;
+                border-radius: 3px;
+                background: $white;
+            }
+        }
+    }
+
+    &__input {
+        width: 32px;
+        height: 32px;
+        margin-right: 29px;
+        cursor: pointer;
+    }
+
+    &__label {
+        color: $dark;
+        font-size: 25px;
+        font-family: $OpenSansFontFamily;
+    }
+
+    &.is-checked:not(.c-checkbox--radio) {
+        #{$root}__input {
+            background: $blue;
+        }
+    }
+
+}

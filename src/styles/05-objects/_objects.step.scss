@@ -1,5 +1,6 @@
 .o-step {
-  padding-top: 200px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 
   &__title {
     font-size: 143px;
@@ -48,6 +49,17 @@
     margin-right: 50px;
     text-align: center;
     cursor: pointer;
+
+    &.is-active {
+      .o-step__help-icon {
+        background: $blue;
+        border-color: $blue;
+
+        svg path {
+          fill: $white;
+        }
+      }
+    }
   }
 
   &__help-icon {
@@ -59,10 +71,11 @@
     border-radius: 150px;
     border: 2px solid rgba($black, 0.18);
     margin-bottom: 20px;
+    transition: 0.3s ease 0s;
 
     svg path {
       fill: $blue;
-      transition: 0.3s ease;
+      transition: 0.3s ease 0s;
     }
   }
 
@@ -230,6 +243,7 @@
 
     &.is-active {
       background: $blue;
+      color: $white;
 
       &::before {
         background: $white;
@@ -277,6 +291,10 @@
     &:focus {
       outline: none;
     }
+  }
+
+  &--1 {
+    padding-top: 0;
   }
 
   &--8 {

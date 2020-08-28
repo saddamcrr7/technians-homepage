@@ -1,0 +1,52 @@
+.c-range {
+  &__slider {
+    width: 100%;
+    height: 136px;
+    margin-bottom: 15px;
+    position: relative;
+  }
+
+  &__slider-line {
+    width: 100%;
+    height: 8px;
+    background: #707070;
+    opacity: 0.18;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    border-radius: 8px;
+  }
+
+  &__slider-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 136px;
+    height: 136px;
+    background: $blue;
+    border-radius: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    svg {
+      pointer-events: none;
+    }
+  }
+
+  &__title {
+    font-size: 30px;
+    color: $dark;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__value {
+    font-size: 108px;
+    font-weight: $font-weight-bold;
+    color: $blue;
+    text-align: center;
+  }
+}

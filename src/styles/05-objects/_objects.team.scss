@@ -101,9 +101,6 @@
       }
     }
 
-    &--m {
-      display: none;
-    }
   }
 
   &__image {
@@ -155,17 +152,6 @@
   @include media-breakpoint-down(sm) {
     padding-top: 0;
 
-    &__image-wrapper {
-      margin-top: 4px;
-
-      &--d {
-        display: none;
-      }
-
-      &--m {
-        display: block;
-      }
-    }
 
     &__sub-title {
       text-align: center;

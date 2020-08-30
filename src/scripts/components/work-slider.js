@@ -52,15 +52,14 @@ const cardsSlider =  new Swiper('.o-work__cards', {
   slideClass: 'c-work-card',
   slideActiveClass: 'c-work-card--active',
   slidesPerView: 1,
+  loop: true,
   pagination: {
     el: '.o-work__cards-pagination',
     clickable: true,
   },
-})
-
-
-if (window.innerWidth > 767) {
-  if (cardsSlider.initialized) {
-    cardsSlider.destroy()
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+    },
   }
-}
+})

@@ -5,6 +5,14 @@ import Swiper, {
 } from 'swiper';
 // configure Swiper to use modules
 Swiper.use([Controller, , Autoplay]);
+import {
+  gsap
+} from "gsap";
+
+import {
+  ScrollTrigger
+} from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 
 const slide1 = new Swiper('.o-our-culture__slider--1', {
@@ -66,6 +74,7 @@ const slide8 = new Swiper('.o-our-culture__slider--8', {
   autoplay: {
     delay: 2000,
     disableOnInteraction: false,
+    waitForTransition: false,
   },
 
   controller: {
@@ -75,146 +84,59 @@ const slide8 = new Swiper('.o-our-culture__slider--8', {
 })
 
 
-
-
-const controller = new ScrollMagic.Controller()
-
-const t1 = new TimelineMax()
-
-t1.from('.o-our-culture__slider--1', 0.5, {
-  opacity: 0,
-  y: 50
+gsap.utils.toArray('.o-our-culture__slider').forEach(slider => {
+  gsap.from(slider, {
+    y: 100,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      trigger: slider,
+      toggleActions: "restart none none none"
+    }
+  })
 })
 
-
-new ScrollMagic.Scene({
-  triggerElement: ".o-our-culture__slider--1",
-  triggerHook: 'onEnter',
-  offset: 203
-}).setTween(t1).addTo(controller);
-
-const t2 = new TimelineMax()
-
-t2.from('.o-our-culture__slider--2', 0.5, {
+gsap.from('.o-our-culture__sub-title', {
+  x: -50,
   opacity: 0,
-  y: 50
+  duration: 1,
+  scrollTrigger: {
+    trigger: '.o-our-culture__title',
+    toggleActions: "restart restart restart restart"
+  }
 })
 
-
-new ScrollMagic.Scene({
-  triggerElement: ".o-our-culture__slider--2",
-  triggerHook: 'onEnter',
-  offset: 203
-}).setTween(t2).addTo(controller);
-
-const t3 = new TimelineMax()
-
-t3.from('.o-our-culture__slider--3', 0.5, {
+gsap.from('.o-our-culture__title', {
+  x: -50,
   opacity: 0,
-  y: 50
-}, 0.2)
-
-
-new ScrollMagic.Scene({
-  triggerElement: ".o-our-culture__slider--3",
-  triggerHook: 'onEnter',
-  offset: 203
-}, ).setTween(t3).addTo(controller);
-
-
-const t4 = new TimelineMax()
-
-t4.from('.o-our-culture__slider--4', 0.5, {
-  opacity: 0,
-  y: 50
-}, 0.4)
-
-
-new ScrollMagic.Scene({
-  triggerElement: ".o-our-culture__slider--4",
-  triggerHook: 'onEnter',
-  offset: 203
-}).setTween(t4).addTo(controller);
-
-
-const t6 = new TimelineMax()
-
-t6.from('.o-our-culture__slider--6', 0.5, {
-  opacity: 0,
-  y: 50
+  duration: 1,
+  scrollTrigger: {
+    trigger: '.o-our-culture__title',
+    toggleActions: "restart restart restart restart"
+  }
 })
 
-
-new ScrollMagic.Scene({
-  triggerElement: ".o-our-culture__slider--6",
-  triggerHook: 'onEnter',
-  offset: 203
-}).setTween(t6).addTo(controller);
-
-
-const t7 = new TimelineMax()
-
-t7.from('.o-our-culture__slider--7', 0.5, {
-  opacity: 0,
-  y: 50
-})
-
-
-new ScrollMagic.Scene({
-  triggerElement: ".o-our-culture__slider--7",
-  triggerHook: 'onEnter',
-  offset: 203
-}).setTween(t7).addTo(controller);
-
-
-const t8 = new TimelineMax()
-
-t8.from('.o-our-culture__slider--8', 0.5, {
-  opacity: 0,
-  y: 50
-}, 0.2)
-
-
-new ScrollMagic.Scene({
-  triggerElement: ".o-our-culture__slider--8",
-  triggerHook: 'onEnter',
-  offset: 203
-}).setTween(t8).addTo(controller);
-
-
-
-const t9 = new TimelineMax()
-
-t9.from('.o-our-culture__sub-title', 0.5, {
-  x: -50, opacity: 0
-}).from('.o-our-culture__title', 0.5, {
-  x: -50, opacity: 0
-}).from('.o-our-culture__title-bg-inner', 0.5, {
+gsap.from('.o-our-culture__title-bg-inner', {
   width: 0,
   height: 0,
-  rotation: 100
+  rotation: 100,
+  duration: 1,
+  scrollTrigger: {
+    trigger: '.o-our-culture__title',
+    toggleActions: "restart restart restart restart"
+  }
 })
 
-
-
-new ScrollMagic.Scene({
-  triggerElement: ".o-our-culture__title",
-  triggerHook: 'onEnter',
-  offset: 100
-}).setTween(t9).addTo(controller);
-
-
-const t10 = new TimelineMax()
-
-t10.to('.o-our-culture__title-bg-inner', 1, {
+gsap.fromTo('.o-our-culture__title-bg-inner', {
+  rotation: 0
+}, {
   rotation: 8,
   repeat: -1,
   yoyo: true,
-  ease: Linear.easeInOut
-}, 1.5)
-
-new ScrollMagic.Scene({
-  triggerElement: ".o-our-culture__title",
-  triggerHook: 'onEnter',
-  offset: 100
-}).setTween(t10).addTo(controller);
+  duration: 1,
+  delay: 1,
+  scrollTrigger: {
+    trigger: '.o-our-culture__title',
+    toggleActions: "restart none none none"
+  }
+})

@@ -96,25 +96,6 @@ gsap.utils.toArray('.o-our-culture__slider').forEach(slider => {
   })
 })
 
-gsap.from('.o-our-culture__sub-title', {
-  x: -50,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: '.o-our-culture__title',
-    toggleActions: "restart restart restart restart"
-  }
-})
-
-gsap.from('.o-our-culture__title', {
-  x: -50,
-  opacity: 0,
-  duration: 1,
-  scrollTrigger: {
-    trigger: '.o-our-culture__title',
-    toggleActions: "restart restart restart restart"
-  }
-})
 
 gsap.from('.o-our-culture__title-bg-inner', {
   width: 0,
@@ -123,7 +104,7 @@ gsap.from('.o-our-culture__title-bg-inner', {
   duration: 1,
   scrollTrigger: {
     trigger: '.o-our-culture__title',
-    toggleActions: "restart restart restart restart"
+    toggleActions: "restart none none none"
   }
 })
 

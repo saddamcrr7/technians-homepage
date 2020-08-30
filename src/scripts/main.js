@@ -10,6 +10,7 @@ import './components/our-culture-sliders'
 import './components/contact-slider'
 import './components/check-box'
 import './components/contact-us'
+import './components/collapse'
 
 const creativeCard1 = document.querySelector('.o-creative-studio__card--1')
 const creativeCard2 = document.querySelector('.o-creative-studio__card--2')

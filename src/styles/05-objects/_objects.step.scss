@@ -489,11 +489,16 @@
       }
     }
 
-    &__ranges .c-range {
-      margin-bottom: 74px;
+    &__ranges {
+      padding-left: 20px;
+      padding-right: 40px;
 
-      &:last-child {
-        margin-bottom: 0;
+      .c-range {
+        margin-bottom: 74px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 

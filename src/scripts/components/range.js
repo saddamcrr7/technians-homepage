@@ -55,8 +55,15 @@ class Range {
     for (let index = 0; index < this.value.length; index++) {}
 
     new TouchEvent(this.selector + ' .c-range__slider', (e) => {
+
       if (e.target == this.icon) {
-        left += e.walkX
+
+        if(e.isMobile) {
+          left = (e.startX + e.walkX) - this.icon.offsetWidth
+        }else {
+          left += e.walkX
+        }
+
         if (left > -1) {
           this.icon.style.left = `${left}px`
           this.activeValue = this.value[Math.round((left) / p)]

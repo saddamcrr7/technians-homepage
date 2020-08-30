@@ -16,18 +16,19 @@ export default class TouchEvent {
     this.walkX = 0
     this.walkY = 0
     this.target
+    this.isMobile = false
 
     this.init()
   }
 
 
   notMobile(element) {
-
     addEvent(element, 'mousedown', (e) => {
       this.isDown = !0
       this.startX = e.layerX - element.offsetLeft
       this.startY = e.layerY - element.offsetTop
       this.target = e.target
+      this.isMobile = false
     })
 
     addEvent(element, 'mouseleave', () => {
@@ -58,14 +59,14 @@ export default class TouchEvent {
   }
 
   mobile(element) {
-
     addEvent(element, 'touchstart', (e) => {
       const ev = e.changedTouches[0]
 
       this.isDown = !0
-      this.startX = ev.clientX - element.offsetLeft
-      this.startY = ev.clientY - element.offsetTop
+      this.startX = ev.pageX - element.offsetLeft
+      this.startY = ev.pageY - element.offsetTop
       this.target = ev.target
+      this.isMobile = true
     })
 
     addEvent(element, 'touchend', (e) => {
@@ -77,18 +78,20 @@ export default class TouchEvent {
       if (this.isDown) {
         const ev = e.changedTouches[0]
 
-        this.endX = ev.clientX
-        this.endY = ev.clientY
+        this.endX = ev.pageX
+        this.endY = ev.pageY
         this.walkX = this.endX - this.startX
         this.walkY = this.endY - this.startY
         this.callback(this)
+        console.log(this.walkX);
+
       }
     })
   }
 
   init() {
-      this.notMobile(this.elem)
-      this.mobile(this.elem)
+    this.notMobile(this.elem)
+    this.mobile(this.elem)
   }
 
 }

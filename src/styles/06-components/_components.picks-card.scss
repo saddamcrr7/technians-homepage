@@ -140,10 +140,30 @@
     transition: 0.3s ease 0s;
   }
 
+  &__view {
+    position: absolute;
+    right: 26px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 4px 14px;
+    background: rgba($black, 0.35);
+    border-radius: 10px 0 0 0;
+    z-index: 2;
+    transition: 0.3s ease 0s;
+  }
+
+  &__view-count {
+    color: $white;
+    font-size: 17px;
+    font-weight: $font-weight-medium;
+    margin-left: 5px;
+  }
+
   &:hover {
     .c-picks-card {
       &__body::before {
-        opacity: 0;
+        top: 100%;
       }
 
       &__bg::before {
@@ -161,6 +181,10 @@
 
       &__author-image-border svg path {
         stroke: $white;
+      }
+
+      &__view {
+        right: 0;
       }
     }
   }

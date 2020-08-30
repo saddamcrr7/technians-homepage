@@ -49,4 +49,29 @@
     color: $blue;
     text-align: center;
   }
+
+  @include media-breakpoint-down(sm) {
+    &__slider {
+      height: 57px;
+    }
+
+    &__slider-icon {
+      width: 57px;
+      height: 57px;
+      padding: 18px 12px;
+    }
+
+    &__slider-line{
+      height: 2px;
+    }
+
+    &__title {
+      font-size: 17px;
+      margin-bottom: 0;
+    }
+
+    &__value  {
+      font-size: 60px;
+    }
+  }
 }

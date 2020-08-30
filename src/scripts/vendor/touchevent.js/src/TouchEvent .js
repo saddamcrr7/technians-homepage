@@ -75,11 +75,10 @@ export default class TouchEvent {
     addEvent(element, 'touchmove', (e) => {
 
       if (this.isDown) {
-        e.preventDefault()
         const ev = e.changedTouches[0]
 
-        this.endX = ev.pageX
-        this.endY = ev.pageY
+        this.endX = ev.clientX
+        this.endY = ev.clientY
         this.walkX = this.endX - this.startX
         this.walkY = this.endY - this.startY
         this.callback(this)

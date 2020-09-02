@@ -30,7 +30,7 @@ cultureSlider.on('touchEnd', function (e) {
   images.forEach(image => {
     gsap.to(image, {
       x: 0,
-      duration: 5
+      duration: 2
     })
   })
 });

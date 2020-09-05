@@ -1,35 +1,10 @@
 import Range from './range'
 
-const pgItems = document.querySelectorAll('.o-steps__pagination-item')
 const steps = document.querySelectorAll('.o-step')
+const pg = document.querySelector('.o-steps__pagination')
 
 
-if (pgItems.length) {
-  const stepP = document.querySelector('.o-steps')
-  const pg = document.querySelector('.o-steps__pagination')
-  pgItems.forEach((pgItem, i) => {
-    pgItem.addEventListener('click', () => {
-      steps[i].scrollIntoView()
-    })
-  })
-
-  window.addEventListener('scroll', (e) => {
-    steps.forEach((step, i) => {
-      if (window.scrollY > step.offsetTop - 50) {
-        pgItems.forEach(item => item.classList.remove(
-          'is-active'))
-        pgItems[i].classList.add('is-active')
-      }
-    })
-
-    if (window.scrollY > stepP.offsetTop) {
-      pg.classList.add('is-active')
-    } else {
-      pg.classList.remove('is-active')
-    }
-  })
-
-
+if (steps.length) {
 
   const helps = document.querySelectorAll('.o-step__help')
 
@@ -39,6 +14,7 @@ if (pgItems.length) {
         item.classList.remove('is-active')
       })
       help.classList.add('is-active')
+      pg.classList.add('is-active')
 
       if (help.dataset.type == 'seals') {
         stepControler([0, 1, 2, 4, 5, 6, 7])
@@ -130,14 +106,51 @@ function stepControler(arr) {
     setpElm.style.display = 'none'
   })
 
+  const stis = pg.querySelectorAll('.o-steps__pagination-item')
+  if (stis) {
+    stis.forEach(sti => {
+      sti.remove()
+    })
+  }
+
+  const stepArr = []
+
   arr.forEach((num, i) => {
     setpElms[num].style.display = 'block'
-    if(i == 0) return
+    if (i == 0) return
     const title = setpElms[num].querySelector('.o-step__title')
     const count = setpElms[num].querySelector('.o-step__count')
     title.innerHTML = `Step ${i}`
     count.innerHTML = `${i} / ${arr.length - 1}`
+
+    const pgItem = document.createElement('div')
+    pgItem.classList.add('o-steps__pagination-item')
+    pgItem.innerHTML = `${i}`
+    pgItem.addEventListener('click', () => {
+      setpElms[num].scrollIntoView()
+    })
+    pg.appendChild(pgItem)
+    stepArr.push(setpElms[num])
   })
 
+  const pgiAfter = pg.querySelectorAll('.o-steps__pagination-item')
+
   steps[arr[1]].scrollIntoView()
+
+  window.addEventListener('scroll', (e) => {
+    stepArr.forEach((stp, i) => {
+      if (window.scrollY > stp.offsetTop - 50) {
+        pgiAfter.forEach(item => item.classList.remove('is-active'))
+        pgiAfter[i].classList.add('is-active')
+      }
+    })
+
+    if (window.scrollY > stepArr[0].offsetTop - 50) {
+      pg.classList.add('is-active')
+    } else {
+      pg.classList.remove('is-active')
+    }
+
+  })
+
 }

@@ -7,6 +7,15 @@
     @include make-container();
   }
 
+  &__wrapper {
+    display: none;
+    position: relative;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
   &__pagination {
     position: sticky;
     z-index: 2;
@@ -18,10 +27,13 @@
     transition: 0.3s ease 0s;
     margin-left: 20px;
     width: 40px;
+    height: 0px;
+    overflow: hidden;
 
     &.is-active {
       opacity: 1;
       visibility: visible;
+      height: auto;
     }
 
     @include media-breakpoint-down(lg) {

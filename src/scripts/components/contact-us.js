@@ -1,12 +1,12 @@
 import Range from './range'
 
 const pgItems = document.querySelectorAll('.o-steps__pagination-item')
+const steps = document.querySelectorAll('.o-step')
 
 
 if (pgItems.length) {
-  const steps = document.querySelectorAll('.o-step')
-const stepP = document.querySelector('.o-steps')
-const pg = document.querySelector('.o-steps__pagination')
+  const stepP = document.querySelector('.o-steps')
+  const pg = document.querySelector('.o-steps__pagination')
   pgItems.forEach((pgItem, i) => {
     pgItem.addEventListener('click', () => {
       steps[i].scrollIntoView()
@@ -35,11 +35,35 @@ const pg = document.querySelector('.o-steps__pagination')
 
   helps.forEach(help => {
     help.addEventListener('click', () => {
-      steps[1].scrollIntoView()
       helps.forEach(item => {
         item.classList.remove('is-active')
       })
       help.classList.add('is-active')
+
+      if (help.dataset.type == 'seals') {
+        stepControler([0, 1, 2, 4, 5, 6, 7])
+      }
+      if (help.dataset.type == 'career') {
+        stepControler([0, 2, 3, 4, 6, 7])
+      }
+      if (help.dataset.type == 'freelancer') {
+        stepControler([0, 2, 3, 4, 6, 7])
+      }
+      if (help.dataset.type == 'guest') {
+        stepControler([0, 2, 4, 6, 7])
+      }
+      if (help.dataset.type == 'partnership') {
+        stepControler([0, 2, 4, 6, 7])
+      }
+      if (help.dataset.type == 'other') {
+        stepControler([0, 2, 4, 6, 7])
+      }
+      if (help.dataset.type == 'webmaster') {
+        stepControler([0, 2, 4, 6, 7])
+      }
+      if (help.dataset.type == 'feedback') {
+        stepControler([0, 1, 2, 4, 6, 7])
+      }
     })
   })
 
@@ -98,4 +122,22 @@ const pg = document.querySelector('.o-steps__pagination')
     }
   })
 
+}
+
+function stepControler(arr) {
+  const setpElms = document.querySelectorAll('.o-step')
+  setpElms.forEach(setpElm => {
+    setpElm.style.display = 'none'
+  })
+
+  arr.forEach((num, i) => {
+    setpElms[num].style.display = 'block'
+    if(i == 0) return
+    const title = setpElms[num].querySelector('.o-step__title')
+    const count = setpElms[num].querySelector('.o-step__count')
+    title.innerHTML = `Step ${i}`
+    count.innerHTML = `${i} / ${arr.length - 1}`
+  })
+
+  steps[arr[1]].scrollIntoView()
 }

@@ -30,6 +30,10 @@
     position: relative;
     margin-bottom: 38px;
     max-width: 780px;
+
+    @include media-breakpoint-down(lg) {
+      max-width: 476px;
+    }
   }
 
   &__title-text {

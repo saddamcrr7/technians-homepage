@@ -64,6 +64,10 @@
     color: $white;
     font-weight: $font-weight-bold;
     margin-bottom: 25px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 30px;
+    }
   }
 
   &__sub {
@@ -73,6 +77,10 @@
     font-family: $RobotoFontFamily;
     font-weight: $font-weight-light;
     margin-bottom: 26px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+    }
   }
 
   &__cta {

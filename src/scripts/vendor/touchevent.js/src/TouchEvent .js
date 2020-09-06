@@ -83,8 +83,6 @@ export default class TouchEvent {
         this.walkX = this.endX - this.startX
         this.walkY = this.endY - this.startY
         this.callback(this)
-        console.log(this.walkX);
-
       }
     })
   }

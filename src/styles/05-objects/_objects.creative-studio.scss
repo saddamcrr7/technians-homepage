@@ -125,7 +125,6 @@
   &__cards {
     position: relative;
     display: flex;
-    overflow: hidden;
     margin-left: -60px;
   }
 
@@ -200,8 +199,17 @@
       font-size: 70px;
     }
 
+    &__title-bg {
+      bottom: 25px;
+      left: -10px;
+    }
+
     &__card {
-      flex: 0 0 750px;
+      flex: 0 0 700px;
+    }
+
+    &__circles {
+      transform: scale(0.8);
     }
   }
 

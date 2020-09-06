@@ -66,6 +66,11 @@
     height: 536.5px;
     position: sticky;
     top: 60px;
+
+    @include media-breakpoint-down(lg) {
+      width: 591px;
+      height: 510px;
+    }
   }
 
   &__dot {
@@ -152,6 +157,7 @@
     &__title {
       margin-bottom: 60px;
     }
+
     &__title-text {
       font-size: 50px;
     }
@@ -167,6 +173,7 @@
 
   @include media-breakpoint-down(sm) {
     padding-bottom: 0;
+
     &__dots {
       display: none;
     }

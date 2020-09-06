@@ -75,7 +75,7 @@
   &__image {
     width: 0px;
     height: 0px;
-    border-radius: 150px;
+    border-radius: 350px;
     @include object-fit(cover);
     opacity: 0;
     transition: 0.4s ease-in-out 0s;

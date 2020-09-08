@@ -22,10 +22,6 @@
 
   &__logo {
     max-width: 377px;
-
-    @include media-breakpoint-between(md, lg) {
-      display: none;
-    }
   }
 
   &__title {
@@ -44,6 +40,10 @@
     font-size: 25px;
     font-weight: $font-weight-light;
     margin-bottom: 72px;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 19px;
+    }
   }
 
   &::before,&::after {

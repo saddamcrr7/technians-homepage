@@ -109,6 +109,10 @@
   &__contact-number {
     font-size: 28px;
     color: $dark;
+
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+    }
   }
 
   &__socials {

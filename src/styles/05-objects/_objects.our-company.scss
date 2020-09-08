@@ -139,6 +139,11 @@
     &--3 {
       right: 0;
       bottom: 90px;
+
+      @include media-breakpoint-down(lg) {
+        right: 41px;
+        bottom: 98px;
+      }
     }
 
   }

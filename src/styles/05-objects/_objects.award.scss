@@ -68,6 +68,10 @@
     padding-left: 28px;
     padding-right: 28px;
 
+    &__tree {
+      max-width: 150px;
+    }
+
     &__title {
       font-size: 70px;
       line-height: initial;

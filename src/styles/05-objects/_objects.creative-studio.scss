@@ -209,13 +209,23 @@
     }
 
     &__card {
-      flex: 0 0 700px;
+      flex: 0 0 600px;
     }
 
     &__circles {
-      transform: scale(0.8);
+      transform: scale(0.7);
+    }
+
+    &__card-title {
+      font-size: 38px;
+      margin-bottom: 4px;
+    }
+
+    &__card-sub {
+      font-size: 16px;
     }
   }
+
 
   @include media-breakpoint-down(md) {
     padding-top: 0;
@@ -235,15 +245,6 @@
     &__card {
       flex: 0 0 400px;
       padding: 25px 28px;
-    }
-
-    &__card-title {
-      font-size: 38px;
-      margin-bottom: 4px;
-    }
-
-    &__card-sub {
-      font-size: 12px;
     }
   }
 

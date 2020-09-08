@@ -127,6 +127,11 @@
 
   @include media-breakpoint-down(lg) {
     min-height: 550px;
+
+    &__body {
+      left: 30px;
+      right: 30px;
+    }
   }
 
   @include media-breakpoint-down(sm) {

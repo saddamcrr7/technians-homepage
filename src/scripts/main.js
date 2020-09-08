@@ -22,7 +22,7 @@ if(creativeCard1) {
       if (x.matches) {
         creativeCard1.style.transform = 'translateX(-90%)'
       } else {
-        creativeCard1.style.transform = 'translateX(-57%)'
+        creativeCard1.style.transform = 'translateX(-50%)'
       }
     })
 
@@ -36,7 +36,7 @@ if(creativeCard1) {
         creativeCard2.style.transform = 'translateX(-220%)'
       } else {
         creativeCard1.style.transform = 'translateX(-57%)'
-        creativeCard2.style.transform = 'translateX(-136%)'
+        creativeCard2.style.transform = 'translateX(-128%)'
       }
     })
 

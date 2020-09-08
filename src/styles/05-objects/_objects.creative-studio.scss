@@ -245,6 +245,10 @@
     &__card {
       flex: 0 0 400px;
       padding: 25px 28px;
+
+      &--3 {
+        transform: translateX(-163%);
+      }
     }
   }
 

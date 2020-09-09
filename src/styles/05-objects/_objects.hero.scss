@@ -272,6 +272,10 @@
       display: none;
     }
 
+    &__title {
+      min-height: 200px;
+    }
+
     &__title-text {
       font-size: 49px;
       text-align: center;
@@ -351,11 +355,11 @@
       bottom: 34px;
     }
 
-    &__project-slider{
+    &__project-slider {
       bottom: 22px;
     }
 
-    &__progress-slider  {
+    &__progress-slider {
       width: calc(100% - 51px);
       height: 104px;
       padding: 7px 10px;

@@ -141,8 +141,8 @@
       bottom: 90px;
 
       @include media-breakpoint-down(lg) {
-        right: 41px;
-        bottom: 98px;
+        right: 20px;
+        bottom: 124px;
       }
     }
 
@@ -156,6 +156,11 @@
     right: 184px;
     bottom: 195px;
     transform: rotate(30deg);
+
+    @include media-breakpoint-down(lg) {
+      width: 150px;
+      right: 197px;
+    }
   }
 
   @include media-breakpoint-down(md) {

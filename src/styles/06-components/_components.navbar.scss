@@ -307,6 +307,10 @@
       padding-bottom: 0;
     }
 
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 10px;
+    }
+
 
     @include media-breakpoint-down(md) {
       margin-bottom: 0px;

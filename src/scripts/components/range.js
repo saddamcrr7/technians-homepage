@@ -50,11 +50,11 @@ class Range {
 
   run() {
     let left = 0
-    let p = (this.slider.offsetWidth / this.value.length)
 
     for (let index = 0; index < this.value.length; index++) {}
 
     new TouchEvent(this.selector + ' .c-range__slider', (e) => {
+      let p = (this.slider.offsetWidth / this.value.length)
 
       if (e.target == this.icon) {
 

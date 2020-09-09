@@ -139,10 +139,6 @@
     &__container {
       padding-left: 26px;
       padding-right: 26px;
-
-      &>.o-clients__items {
-        display: none;
-      }
     }
 
     &__sub-title {
@@ -167,6 +163,12 @@
 
   @include media-breakpoint-down(md) {
     padding-top: 0;
+
+    &__container {
+      &>.o-clients__items {
+        display: none;
+      }
+    }
 
     &__content {
       margin-top: 0;

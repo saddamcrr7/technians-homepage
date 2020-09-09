@@ -66,6 +66,11 @@
     margin-right: auto;
     height: 850px;
     z-index: 2;
+
+
+    @include media-breakpoint-down(lg) {
+      height: 500px;
+    }
   }
 
   &__image-slider {

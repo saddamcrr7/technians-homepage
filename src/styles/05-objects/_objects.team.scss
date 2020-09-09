@@ -139,6 +139,13 @@
 
   }
 
+  @include media-breakpoint-down(lg) {
+
+    &__image-wrapper {
+      height: 250px;
+    }
+  }
+
   @include media-breakpoint-down(md) {
     &__title-text {
       font-size: 50px;

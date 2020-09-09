@@ -19,7 +19,7 @@ let companysSlider = new Swiper('.o-featured-work__companys-slider', {
 })
 
 
-if (window.innerWidth > 1400) {
+if (window.innerWidth > 1026) {
   if(companysSlider.initialized) {
     companysSlider.destroy();
   }

@@ -236,19 +236,28 @@
     }
 
     &__title-text {
-      font-size: 43px;
+      font-size: 33px;
+    }
+
+    &__title {
+      min-height: 85px;
+    }
+
+    &__sub {
+      font-size: 20px;
+      margin-bottom: 30px;
     }
 
     &__sliders {
-      height: 650px;
+      height: 500px;
     }
 
     &__images-slider {
-      height: 571px;
+      height: 420px;
     }
 
     &__scroll {
-      bottom: 407px;
+      bottom: 450px;
     }
   }
 

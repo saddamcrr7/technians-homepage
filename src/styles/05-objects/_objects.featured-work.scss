@@ -147,6 +147,12 @@
     border-right: none;
     overflow: hidden;
 
+    @include media-breakpoint-between(md, lg) {
+      flex: 0 0 250px;
+      height: 200px;
+      width: 250px;
+    }
+
     &::before {
       content: '';
       position: absolute;
@@ -242,29 +248,37 @@
     }
 
     &__details-title {
-      font-size: 50px;
+      font-size: 25px;
+      margin-bottom: 20px;
+      text-align: center;
     }
 
     &__details-sub {
       font-size: 30px;
+      font-size: 18px;
+      text-align: center;
     }
 
     &__box {
-      height: 900px;
+      height: 100vh;
     }
 
     &__companys {
-      bottom: 200px;
+      bottom: 100px;
+    }
+
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 0;
+
+    &__companys {
       width: 100%;
     }
 
     &__company {
       flex: 0 0 auto;
     }
-  }
-
-  @include media-breakpoint-down(md) {
-    padding-top: 0;
 
     &__detail {
       padding: 20px 40px;
@@ -276,10 +290,6 @@
       &::before {
         width: 190px;
       }
-    }
-
-    &__box {
-      height: 780px;
     }
 
     &__companys {

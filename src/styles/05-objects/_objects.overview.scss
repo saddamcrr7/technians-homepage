@@ -119,11 +119,29 @@
     margin-right: auto;
   }
 
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
+    padding-top: 70px;
 
     &__title-text {
       font-size: 50px;
     }
+
+
+    &__sub {
+      font-size: 20px;
+    }
+
+    &__about-icon {
+      width: 80px;
+    }
+
+    &__about-title {
+      font-size: 22px;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    padding-top: 70px;
 
     &__abouts {
       max-width: 600px;

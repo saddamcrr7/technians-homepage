@@ -195,6 +195,36 @@
     }
   }
 
+  @include media-breakpoint-between(md, lg) {
+    &__slider-item {
+      flex: 0 0 298px;
+    }
+
+    height: 329px;
+
+    &__body {
+      width: 250px;
+    }
+
+    &__tag {
+      font-size: 13px;
+    }
+
+    &__title {
+      font-size: 17px;
+      margin-bottom: 15px;
+      margin-top: 0;
+    }
+
+    &__author-name {
+      font-size: 15px;
+    }
+
+    &__author-post-date {
+      font-size: 12px;
+    }
+  }
+
   @include media-breakpoint-down(md) {
     height: 390px;
 

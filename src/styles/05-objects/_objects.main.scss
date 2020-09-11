@@ -7,7 +7,7 @@
   }
 
   &__container {
-    width: calc(100vw - 148px);
+    width: calc(100% - 134px);
     margin-left: auto;
     transition: transform 750ms ease 0s;
     transform-origin: 100% 0%;
@@ -17,7 +17,7 @@
     z-index: 9;
 
     @include media-breakpoint-down(lg) {
-      width: calc(100vw - 134px);
+      width: calc(100% - 100px);
     };
 
     @include media-breakpoint-down(md) {

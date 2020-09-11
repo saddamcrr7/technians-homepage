@@ -78,16 +78,16 @@
 
   @include media-breakpoint-down(lg) {
     max-width: 1000px;
-  }
-
-  @include media-breakpoint-down(md) {
-    max-width: 700px;
-    margin-bottom: 90px;
 
     &__title,
     &__texts {
       font-size: 18px;
     }
+  }
+
+  @include media-breakpoint-down(md) {
+    max-width: 700px;
+    margin-bottom: 90px;
   }
 
   @include media-breakpoint-down(sm) {

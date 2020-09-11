@@ -50,6 +50,31 @@
     text-align: center;
   }
 
+  @include media-breakpoint-down(lg) {
+    &__slider {
+      height: 80px;
+    }
+
+    &__slider-icon {
+      width: 80px;
+      height: 80px;
+      padding: 18px 12px;
+    }
+
+    &__slider-line{
+      height: 7px;
+    }
+
+    &__title {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+
+    &__value  {
+      font-size: 60px;
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     &__slider {
       height: 57px;

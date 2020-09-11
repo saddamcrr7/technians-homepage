@@ -64,6 +64,12 @@
     }
   }
 
+  @include media-breakpoint-between(md, lg) {
+    &__slider-item {
+      flex: 0 0 298px;
+    }
+  }
+
   @include media-breakpoint-down(lg) {
     padding-right: 0;
 

@@ -244,6 +244,10 @@
     transform-origin: 100% 100%;
     transition: 0.7s ease 0s;
 
+    @include media-breakpoint-down(lg) {
+      width: calc(100% - 100px);
+    }
+
     @include media-breakpoint-down(md) {
       width: 100%;
     }

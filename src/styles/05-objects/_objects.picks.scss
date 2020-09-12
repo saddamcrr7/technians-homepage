@@ -72,6 +72,7 @@
 
   @include media-breakpoint-down(lg) {
     padding-right: 0;
+    padding-left: 25px;
 
     &__slider-arrow--next {
       right: 28px;

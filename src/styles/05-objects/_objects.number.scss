@@ -196,23 +196,42 @@
 
     &__title,
     &__slider-title {
-      font-size: 90px;
+      font-size: 60px;
     }
 
     &__sub-title {
-      font-size: 70px;
+      font-size: 40px;
+    }
+
+    &__slider-title {
+      margin-bottom: 0;
+      line-height: 70px;
     }
 
     &__items {
       flex-wrap: wrap;
+      margin-bottom: 100px;
     }
 
     &__item {
       font-size: 50px;
     }
 
+    &__slider {
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-bottom: 20px;
+    }
+
     &__slider-image-wrapper {
-      height: 570px;
+      height: 300px;
+      margin-bottom: 10px;
+    }
+
+    &__slider-address p {
+      font-size: 20px;
+      margin-bottom: 5px;
     }
 
     &__slider-next,

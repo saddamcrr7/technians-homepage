@@ -5,7 +5,9 @@
 
   &__container {
     @include make-container();
-    max-width: 1504px + $grid-gutter-width;
+    padding-left: 25px;
+    padding: 25px;
+    max-width: 1504px + 25px;
   }
 
   &__top {

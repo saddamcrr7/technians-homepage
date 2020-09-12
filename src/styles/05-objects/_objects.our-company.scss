@@ -5,6 +5,8 @@
 
   &__container {
     @include make-container();
+    padding-left: 25px;
+    padding: 25px;
     max-width: 1504px;
   }
 

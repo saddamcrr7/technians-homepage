@@ -228,6 +228,10 @@
 
   @include media-breakpoint-down(lg) {
 
+    &__container {
+      padding-left: 25px;
+    }
+
     &__title {
       min-height: 200px;
       max-width: 400px;

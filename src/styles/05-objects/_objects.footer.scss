@@ -52,7 +52,7 @@
 
   &__contact-wrapper {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
 
@@ -77,6 +77,10 @@
     &--mobile {
       display: none;
       width: 40%;
+    }
+
+    @include media-breakpoint-down(lg) {
+      max-width: 160px;
     }
 
     @include media-breakpoint-down(md) {
@@ -104,6 +108,11 @@
     font-weight: $font-weight-bold;
     color: $dark;
     margin-bottom: 10px;
+
+
+    @include media-breakpoint-down(lg) {
+      font-size: 20px;
+    }
   }
 
   &__contact-number {
@@ -111,7 +120,7 @@
     color: $dark;
 
     @include media-breakpoint-down(lg) {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 
@@ -163,9 +172,12 @@
     font-family: $OpenSansFontFamily;
     color: #15100f;
 
+    @include media-breakpoint-down(lg) {
+      font-size: 16px;
+    }
+
     @include media-breakpoint-down(sm) {
       margin-bottom: 20px;
-      font-size: 16px;
       text-align: center;
     }
   }
@@ -245,7 +257,7 @@
     transition: 0.7s ease 0s;
 
     @include media-breakpoint-down(lg) {
-      width: calc(100% - 100px);
+      width: calc(100% - 90px);
     }
 
     @include media-breakpoint-down(md) {

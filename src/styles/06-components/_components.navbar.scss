@@ -98,6 +98,10 @@
       }
     }
 
+    @include media-breakpoint-between(md, lg) {
+      left: 115px;
+    }
+
     @include media-breakpoint-down(md) {
       position: unset;
       top: auto;
@@ -129,8 +133,9 @@
     opacity: 0;
 
     @include media-breakpoint-between(md, lg) {
-      left: 19px;
+      left: 25px;
       top: 20px;
+      width: 40px;
     }
 
     @include media-breakpoint-down(md) {
@@ -157,6 +162,14 @@
       transform: rotate(-90deg) translate(50%, -0%);
       transform-origin: center center;
       opacity: 0;
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      font-size: 20px;
+
+      &--2 {
+        left: 19px;
+      }
     }
 
     @include media-breakpoint-down(md) {
@@ -188,6 +201,11 @@
       &:last-child {
         width: 80%;
       }
+    }
+
+    @include media-breakpoint-between(md, lg) {
+      width: 30px;
+      height: 20px;
     }
 
     @include media-breakpoint-down(md) {
@@ -613,6 +631,12 @@
           &--white {
             opacity: 0;
           }
+        }
+      }
+
+      @include media-breakpoint-between(md, lg) {
+        &__brand {
+          left: 115px;
         }
       }
     }

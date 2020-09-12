@@ -79,6 +79,39 @@
     }
   }
 
+  @include media-breakpoint-down(lg) {
+    width: 250px;
+    height: 200px;
+    padding: 20px 17px 13px 10px;
+
+    &__sub-title {
+      font-size: 16px;
+      padding-bottom: 10px;
+
+      &::after {
+        width: 100px;
+      }
+    }
+
+    &__title {
+      font-size: 35px;
+      line-height:60px;
+    }
+
+    &__sub {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    &__cta {
+      font-size: 16px;
+
+      img {
+        width: 10px;
+      }
+    }
+  }
+
   @include media-breakpoint-down(sm) {
     width: 101px;
     height: 79px;

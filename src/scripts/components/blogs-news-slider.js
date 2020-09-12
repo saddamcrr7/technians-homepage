@@ -24,7 +24,7 @@ let  blogsSlider = new Swiper('.o-blogs-news__slider', {
         slidesPerView: 2.5,
       },
       1024: {
-        slidesPerView: 4,
+        slidesPerView: 3.25,
       },
       1600: {
         slidesPerView: 3,

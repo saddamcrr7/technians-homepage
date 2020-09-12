@@ -326,7 +326,7 @@
       margin-bottom: 0px;
     }
 
-    @media (min-height: 811px) and (min-width: 374px) {
+    @media (min-height: 811px) and (min-width: 374px) and (max-width: 375px) {
       margin-bottom: 8px;
     }
 
@@ -364,7 +364,7 @@
       font-size: 28px;
     }
 
-    @media (min-height: 811px) and (min-width: 374px) {
+    @media (min-height: 811px) and (min-width: 374px) and (max-width: 375px)  {
       font-size: 50px;
       line-height: 60px;
     }

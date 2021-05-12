@@ -52,7 +52,7 @@
     "jquery": "^3.5.1",
     "nouislider": "^14.6.1",
     "pixi.js": "^5.3.3",
-    "swiper": "^6.1.2"
+    "swiper": "^6.5.1"
   },
   "browserslist": [
     "> 1%",
